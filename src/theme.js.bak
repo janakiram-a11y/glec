@@ -1,0 +1,348 @@
+export function withAlpha(hex, opacity) {
+  return hex + Math.round(opacity * 255).toString(16).padStart(2, '0').toUpperCase();
+}
+
+const college = {
+  id: 'glec',
+  shortName: 'GLEC',
+  fullName: 'Gokaraju Lailavathi Engineering College',
+  tagline: "Building tomorrow's engineers with excellence and integrity.",
+  email: 'placements@glwec.in',
+  phone: '+91 7207344440',
+  admissionsPhone: '+91 7207344440',
+  admissionsLabel: 'Admissions helpdesk available for 2025–26',
+  address: 'Nizampet Road, Bachupally, Kukatpally, Hyderabad – 500090',
+  counsellingCode: 'GLWC',
+  counsellingExam: 'TG EAPCET',
+  logo: '/imgi_1_GLEC_Logo.png',
+  accreditationLogo: null,
+  smallLogo: '/small-logo.png',
+  primaryColor: '#5B1127',
+  accentColor: '#E6A31E',
+
+  socialLinks: {
+    instagram: 'https://www.instagram.com',
+    facebook: 'https://www.facebook.com',
+    linkedin: 'https://www.linkedin.com',
+    youtube: 'https://www.youtube.com',
+  },
+
+  announcements: [
+    { text: 'Deemed-to-be University – LOI Received', badge: 'NEW', isLOI: true },
+    { text: 'Admissions Open for 2025–26', href: '/admissions', badge: 'NEW' },
+    { text: 'B.E. 2025-2026 admitted students regular classwork commences from 28th August 2025', href: '#', badge: 'NEW' },
+    { text: 'Faculty Recruitment — Applications Open', href: '#', badge: 'NEW' },
+  ],
+
+  navLinks: [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    {
+      name: 'Administration',
+      href: '/administration',
+      dropdown: [
+        { label: 'Management', href: '/administration' },
+        { label: 'Sponsoring Body & MOAG', href: '/administration#sponsoring-body' },
+        { label: 'Governing Body', href: '/administration#governing-body' },
+        { label: 'Registrar', href: '/administration#registrar' },
+        { label: 'Principal', href: '/administration#principal' },
+        { label: 'ID Plan', href: '/administration#id-plan' },
+        { label: 'Anti Ragging Committee', href: '/administration#anti-ragging' },
+        { label: 'Anti Sexual Harassment Committee', href: '/administration#anti-harassment' },
+        { label: 'Grievance Redressal Policy', href: '/administration#grievance' },
+        { label: 'SEGD Cell', href: '/administration#segd' },
+        { label: 'Finance Committee', href: '/administration#finance' },
+        { label: 'Equal Opportunity Cell', href: '/administration#equal-opportunity' },
+        { label: 'ICC', href: '/administration#icc' },
+      ],
+    },
+    {
+      name: 'Admissions',
+      href: '/admissions',
+      dropdown: [
+        { label: 'Courses Offered', href: '/admissions' },
+        { label: 'Admission Procedure', href: '/admissions#procedure' },
+        { label: 'Course Fees', href: '/admissions#fees' },
+        { label: 'EAPCET Ranks', href: '/admissions#eapcet' },
+        { label: 'Fee Refund Policy', href: '/admissions#refund' },
+      ],
+    },
+    {
+      name: 'Academics',
+      href: '/academics',
+      dropdown: [
+        { label: 'Academic Leadership', href: '/academics' },
+        { label: 'Academic Collaborations', href: '/academics#collaborations' },
+        { label: 'IQAC', href: '/academics#iqac' },
+        { label: 'Library', href: '/academics#library' },
+        { label: 'Rules & Regulations', href: '/academics#rules' },
+        { label: 'Academic Calendar', href: '/academics#calendar' },
+      ],
+    },
+    {
+      name: 'Departments',
+      href: '/departments/cse',
+      dropdown: [
+        { label: 'B.E. (CSE)', href: '/departments/cse' },
+        { label: 'B.E. (CSE AI & ML)', href: '/departments/cse-aiml' },
+        { label: 'B.E. (IT)', href: '/departments/it' },
+        { label: 'B.E. (Cyber Security)', href: '/departments/cyber-security' },
+        { label: 'B.E. (H&S)', href: '/departments/hs' },
+      ],
+    },
+    { name: 'Research', href: '/research' },
+    { name: 'Placements', href: '/placements' },
+    {
+      name: 'Examinations',
+      href: '/examinations',
+      dropdown: [
+        { label: 'Examination Committee', href: '/examinations' },
+        { label: 'Notifications', href: '/examinations#notifications' },
+        { label: 'Results', href: '/examinations#results' },
+        { label: 'Exam Branch Online Services', href: '/examinations#online-services' },
+      ],
+    },
+    { name: 'Contact Us', href: '/contact' },
+  ],
+
+  quickLinks: [
+    { label: 'About College', href: '/about' },
+    { label: 'Chairman', href: '/administration' },
+    { label: 'Vice President', href: '/administration' },
+    { label: 'Registrar', href: '/administration#registrar' },
+    { label: 'Principal', href: '/administration#principal' },
+    { label: 'Placements', href: '/placements' },
+    { label: 'Infrastructure', href: '/about/infrastructure' },
+    { label: 'SKILL Series', href: '/research' },
+    { label: 'Contact Us', href: '/contact' },
+  ],
+
+  resources: [
+    { label: 'Health Facilities', href: '/about/infrastructure#health' },
+    { label: 'Sports Facilities', href: '/about/infrastructure#sports' },
+    { label: 'Placements', href: '/placements' },
+    { label: 'Physically Challenged', href: '/about/infrastructure#accessibility' },
+    { label: 'Ombudsperson', href: '/administration#ombudsperson' },
+    { label: 'RTI Act', href: '/administration#rti' },
+  ],
+
+  // ── Hero ──────────────────────────────────────────────────────────────────
+  heroHeading: "Shaping Tomorrow's Engineers with Excellence & Innovation",
+  heroSubtext: 'Gokaraju Lailavathi Engineering College, established in 2021, is committed to providing world-class technical education. AICTE approved and affiliated with Osmania University, GLEC nurtures students into competent professionals under the Gokaraju Group legacy.',
+  heroCTALabel: 'Admissions Open 2025',
+  heroCTAHref: '/admissions',
+  heroBgImage: '/imgi_5_aboutusbanner.jpg',
+
+  // ── Stats Bar ─────────────────────────────────────────────────────────────
+  statsBarItems: ['AICTE Approved', 'Osmania University Affiliated', '253 Placement Offers', '6+ LPA Highest Package'],
+
+  // ── Campus Intro ──────────────────────────────────────────────────────────
+  campusIntroLabel: 'Campus Experience',
+  campusIntroHeading: 'Be a Part of the GLEC Experience',
+  campusIntroDesc: 'Step into a future-focused campus where innovation meets opportunity. At GLEC, students learn beyond classrooms through hands-on labs, collaborative projects, industry exposure, and a thriving student community dedicated to excellence.',
+  campusVideoSrc: null,
+  campusIntroImage: '/imgi_4_Gokaraju-Rangaraju.jpg',
+
+  // ── Highlight Cards ───────────────────────────────────────────────────────
+  highlightCards: [
+    { title: 'AICTE Approved', desc: 'Recognized by AICTE with programs meeting national quality standards.' },
+    { title: 'Placements', desc: '253 placement offers with top recruiters for the 2025 batch.' },
+    { title: 'Community', desc: 'A vibrant student community with innovative clubs and student chapters.' },
+  ],
+
+  // ── About ─────────────────────────────────────────────────────────────────
+  aboutHeading: 'Welcome to Gokaraju Lailavathi Engineering College',
+  aboutP1: 'Gokaraju Lailavathi Engineering College (GLEC) — previously Gokaraju Lailavathi Womens Engineering College (GLWEC) — was established in 2021 by Dr. G. Gangaraju as a self-financed institution under the Gokaraju Rangaraju Educational Society. Approved by AICTE, New Delhi, and affiliated with Osmania University, Hyderabad.',
+  aboutP2: 'As a sister concern of GRIET, GLEC adopts its world-class facilities and teaching-learning processes to ensure excellence in education. The college converted to co-education from the academic year 2024–25, now welcoming all students with a TG EAPCET counselling code of GLWC.',
+  aboutP3: 'With a management committee comprising experts from various industries and academia, GLEC is committed to fostering experiential learning, innovation, and holistic development — shaping graduates who are career-ready and globally competitive.',
+  aboutFeatures: [
+    { title: 'AICTE Approved', sub: 'Nationally recognized programs' },
+    { title: 'OU Affiliated', sub: 'Osmania University, Hyderabad' },
+    { title: 'Expert Faculty', sub: 'Industry & research veterans' },
+    { title: 'Modern Infrastructure', sub: 'State-of-the-art labs & campus' },
+  ],
+  aboutYears: '4+',
+  aboutYearsLabel: 'Years of Academic Excellence',
+  aboutImage: '/Why choose us.png',
+  aboutTotalSeats: '480+',
+
+  // ── Vision & Mission ──────────────────────────────────────────────────────
+  // ── About Page Content ────────────────────────────────────────────────────────
+  aboutFounders: 'Dr. G. Gangaraju, Chairman of the Gokaraju Rangaraju Educational Society (GRES) and the Laila Group of Industries, is the inspiring force behind Gokaraju Lailavathi Engineering College. A visionary industrialist and philanthropist, Dr. Gangaraju established GRIET in 1997 and extended his commitment to technical education by founding GLEC in 2021. His mission has always been to create institutions that empower young minds with practical skills, ethical values, and the confidence to compete on a global stage.',
+
+  aboutSociety: "Gokaraju Lailavathi Engineering College is established by the Gokaraju Rangaraju Educational Society (GRES), a trust founded with a singular commitment to providing quality higher education in Engineering and Technology. GRES operates Gokaraju Rangaraju Institute of Engineering & Technology (GRIET), one of Hyderabad's most reputed autonomous engineering colleges, and extended its educational vision to GLEC in 2021. The Society is committed to fostering centres of academic excellence that produce globally competent engineers.",
+
+  aboutDetailedParagraphs: [
+    "Gokaraju Lailavathi Engineering College (GLEC) — formerly Gokaraju Lailavathi Women's Engineering College (GLWEC) — was established in 2021 under the Gokaraju Rangaraju Educational Society by Dr. G. Gangaraju. Approved by AICTE, New Delhi, and affiliated with Osmania University, Hyderabad, GLEC is a self-financed institution committed to delivering world-class engineering education.",
+    'As a sister institution of GRIET, GLEC inherits a culture of academic rigour, research orientation, and industry engagement developed over 25+ years. The college converted to co-education from the academic year 2024–25 and now offers B.E. programmes in Computer Science & Engineering, CSE (AI & ML), Information Technology, Cyber Security, and Humanities & Sciences.',
+    'The institution is led by a visionary management committee comprising industry experts, academic leaders, and research scholars. GLEC operates from a modern, fully equipped campus at Nizampet Road, Bachupally, Hyderabad, with state-of-the-art laboratories, a central library, sports facilities, and residential hostels.',
+    "GLEC's flagship skill development programmes — NIPUN (industry bridge), DHI (communication & leadership), and SEEKH (experiential learning) — ensure that graduates are not only technically proficient but also industry-ready communicators and problem solvers. The 2025 batch recorded 253 placement offers with a highest package of 6+ LPA from recruiters including Microsoft, Oracle, TCS, Capgemini, Infosys, and Deloitte.",
+    'Driven by values of Excellence, Integrity, Innovation, and Service to the Nation, GLEC aspires to be a world-class engineering college that inspires young technocrats to become globally competent professionals and leaders committed to societal development.',
+  ],
+
+  vision: 'To be world class engineering college for imparting experiential, innovative and critical skills addressing societal problems. Inspiring young technocrats to become globally competent in technical education and research to emerge as world class leaders.',
+
+  mission: [
+    'To promote experiential learning in students by engaging them in hands on experience and reflection, so that, they are able to connect theories and knowledge learned in the classroom to real-world situations.',
+    'To create an ambience in which novel ideas, research and development flourish in order to shape the emerging innovators.',
+    'To provide infrastructure and facilities to meet the latest technology trends.',
+    'To avail necessary support for skill enhancement to reduce the industry-academia gap.',
+  ],
+
+  qualityPolicy: 'To provide an integrated learning environment to enable students to grow towards their full potential and meet the high expectations of the Industry and the Society.',
+
+  strategies: [
+    'Develop and sustain a qualified, research-oriented, and industry-experienced faculty pool.',
+    'Forge strategic partnerships with leading industries for internships, projects, and placements.',
+    'Continuously update curricula to align with emerging technologies and national/global industry needs.',
+    'Foster a culture of innovation through research centres, student clubs, and entrepreneurship cells.',
+    'Implement outcome-based education (OBE) with regular feedback loops from alumni, industry, and academia.',
+    'Provide comprehensive student support — mentoring, counselling, health, sports, and career services.',
+  ],
+
+  coreValues: [
+    { name: 'Excellence', desc: 'Continually strive to achieve the highest standards in education and research.' },
+    { name: 'Integrity', desc: 'Sustain an atmosphere of honesty, openness, and transparency in all dealings.' },
+    { name: 'Innovation', desc: 'Promote a culture of curiosity and reward originality of thought and action.' },
+    { name: 'Entrepreneurship', desc: 'Promote and nurture entrepreneurial spirit among students.' },
+    { name: 'Leadership', desc: 'Develop leaders with ability to find creative solutions to the problems of the industry.' },
+    { name: 'Sustainability', desc: 'Conduct research that addresses critical global challenges and promote public awareness of the issues involved.' },
+    { name: 'Service to the Nation', desc: 'Utilize technology for building national wealth.' },
+  ],
+
+  // ── Leadership ────────────────────────────────────────────────────────────
+  leadership: [
+    {
+      name: 'Dr. Gokaraju Ganga Raju',
+      title: 'Chairman',
+      image: 'https://www.glwec.in/images/Gokaraju_Ganga_Raju.jpg',
+      bio: 'Founder of the Gokaraju Rangaraju Educational Society. Established GRIET in 1997 and GLEC in 2021. Chairman of Laila Group of Industries with interests spanning pharmaceuticals, paper, sugar, and agro-products.',
+    },
+    {
+      name: 'Sri G.V.K. Ranga Raju',
+      title: 'Vice President',
+      image: 'https://www.glwec.in/images/Ranga_Raju.jpg',
+      bio: 'Vice President of GRES, bringing business expertise and a forward-thinking educational philosophy. Advocates for technology-driven learning and preparing students to become leaders in modern industry.',
+    },
+    {
+      name: 'Dr. Akundi Sai Hanuman',
+      title: 'Principal',
+      image: 'https://www.glwec.in/images/Akund_Sai_Hanuman.jpg',
+      bio: 'Professor of CSE with 24+ years of experience in academics, industry, and research. Ph.D. from Acharya Nagarjuna University. 35+ publications, 2 patents. IEEE & CSI member.',
+    },
+    {
+      name: 'Prof. K.V.S. Raju',
+      title: 'Registrar',
+      image: 'https://www.glwec.in/images/K_VS_Raju.jpg',
+      bio: 'Ph.D. in Management from JNTU Hyderabad with extensive experience spanning academia and banking. Active researcher with contributions in national and international journals.',
+    },
+  ],
+
+  // ── Why Choose GLEC ───────────────────────────────────────────────────────
+  whyChooseLabel: 'Why Choose GLEC',
+  whyChooseHeading: 'Academic Excellence That Shapes Your Success',
+  whyChooseCards: [
+    { title: 'Quality Education', desc: 'Programs designed with strong educational benchmarks and AICTE-approved quality standards for career-ready graduates.' },
+    { title: 'Career Advantage', desc: '253 placement offers across top companies for the 2025 batch — with Microsoft, Oracle, Capgemini, Infosys, and more.' },
+    { title: 'Innovative Teaching', desc: 'Teaching practices aligned with modern industry needs through NIPUN, DHI, and SEEKH skill-development initiatives.' },
+    { title: 'Skill Development', desc: 'Dedicated programs bridging the academia-industry gap through experiential learning and communication workshops.' },
+    { title: 'Innovation Culture', desc: 'Strong support for research, innovation clubs, student-driven projects, and emerging technology exploration.' },
+    { title: 'GRIET Legacy', desc: "Backed by the Gokaraju Group — sharing GRIET's world-class infrastructure, faculty network, and 25+ years of excellence." },
+  ],
+
+  // ── Academic Programs ─────────────────────────────────────────────────────
+  academicProgramsLabel: 'Academic Programs',
+  academicProgramsHeading: 'Programs Designed for Future Engineers',
+  academicProgramsDesc: 'Explore career-focused programs built to prepare students for innovation, leadership, and industry success.',
+  academicPrograms: [
+    {
+      count: 'B.E.',
+      title: 'Computer Science & Engineering',
+      seats: 360,
+      desc: 'Industry-focused engineering degree with strong foundations in software, systems, and emerging technologies.',
+    },
+    {
+      count: 'B.E.',
+      title: 'CSE (AI & ML)',
+      seats: 120,
+      desc: 'Specialization in Artificial Intelligence and Machine Learning for future-ready, high-demand careers.',
+    },
+    {
+      count: 'B.E.',
+      title: 'Information Technology',
+      seats: null,
+      desc: 'Comprehensive IT program covering networks, databases, cloud computing, and enterprise systems.',
+    },
+    {
+      count: 'B.E.',
+      title: 'Cyber Security',
+      seats: null,
+      desc: 'Specialized program in ethical hacking, network security, cryptography, and digital forensics.',
+    },
+    {
+      count: 'B.E.',
+      title: 'Humanities & Sciences',
+      seats: null,
+      desc: 'Foundational program covering mathematics, physics, chemistry, and communication skills for engineering.',
+    },
+  ],
+
+  // ── Career Outcomes ───────────────────────────────────────────────────────
+  careerLabel: 'Career Outcomes',
+  careerHeading: 'Where Talent Meets Opportunity',
+  careerDesc: 'GLEC graduates are hired by top recruiters across technology and core engineering domains. Strong placement training, mentoring through NIPUN and SEEKH initiatives, and industry collaborations help students launch successful careers.',
+  careerHighestPackage: '6+ LPA',
+  careerOffersCount: '253+',
+  careerRecruiters: [
+    'Microsoft', 'Oracle', 'Capgemini', 'TCS', 'Infosys',
+    'Deloitte', 'Cognizant', 'Accenture', 'Wipro', 'TechMahindra',
+    'Pega Systems', 'ADP', 'Factset', 'NetCracker', 'S&P Capital IQ', 'L&T Constructions',
+  ],
+  careerImage: '/Career Outcomes.png',
+
+  // ── Research & Initiatives ────────────────────────────────────────────────
+  researchLabel: 'Our Initiatives',
+  researchHeading: 'Innovation & Skill Development at GLEC',
+  researchStats: [
+    {
+      count: 'NIPUN',
+      label: 'Industry Bridge Program',
+      desc: 'Nurtures innovative thinking and bridges the academia-industry gap through project-based learning.',
+    },
+    {
+      count: 'DHI',
+      label: 'Communication & Leadership',
+      desc: 'Develops public speaking, essay writing, dramatics, debates, JAM sessions, and group discussions.',
+    },
+    {
+      count: 'SEEKH',
+      label: 'Experiential Learning',
+      desc: 'Delivers hands-on experiential learning for budding engineers through real-world application.',
+    },
+    {
+      count: '253+',
+      label: 'Placement Offers',
+      desc: 'Total placement offers for the 2025 batch across top companies in technology and engineering.',
+    },
+  ],
+
+  // ── Campus Life ───────────────────────────────────────────────────────────
+  campusLifeLabel: 'Student Experience',
+  campusLifeHeading: 'Vibrant Campus Life',
+  campusLifeCards: [
+    { title: 'Cultural Events & Fests', desc: 'Annual flagship events bringing students together from across the campus.', img: '/Cultural event & Fests.png', large: true },
+    { title: 'Sports Facilities', desc: 'Indoor and outdoor sports complexes for every student.', img: '/Sports fecilities.png' },
+    { title: 'Innovation Clubs', desc: 'Student-run tech and non-tech chapters fostering creativity.', img: '/Innovation clubs.png' },
+    { title: 'Hostel Life', desc: 'Comfortable, secure, and vibrant residential halls.', img: '/Hostel life.png' },
+    { title: 'Central Library', desc: 'A hub of knowledge with thousands of curated resources.', img: '/Central library.png' },
+  ],
+
+  // ── Admissions CTA ────────────────────────────────────────────────────────
+  ctaHeading: 'Admissions Open for 2025–26',
+  ctaDesc: 'Take the first step towards a bright future. Join GLEC and shape your engineering career with world-class education, strong placement support, and a legacy of excellence.',
+  ctaCTALabel: 'Apply Now',
+  ctaCTAHref: '/admissions',
+  ctaSecondaryLabel: 'Download Brochure',
+};
+
+export default college;

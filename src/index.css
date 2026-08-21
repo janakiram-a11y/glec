@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Brand CSS custom properties ─────────────────────────────────────────── */
+:root {
+  --brand-primary:   #5B1027;
+  --brand-highlight: #C32033;
+  --brand-dark:      #222222;
+  --brand-neutral:   #BFBFBF;
+  --brand-soft:      #F3DAB2;
+
+  /* ── Typography Design System — scale reference ──────────────────────────
+     Tokens mirror tailwind.config.js fontSize entries.
+     Use Tailwind classes (text-type-h1, text-type-body, etc.) in components.
+     Headings  → font-hind  font-semibold (600)
+     Body      → font-hind  font-normal   (400)
+     UI/Labels → font-dm-sans font-medium (500)
+     Captions  → font-dm-sans font-normal (400)
+  ─────────────────────────────────────────────────────────────────────────── */
+  --type-h1:       3rem / 3.5rem;      /* 48px / 56px */
+  --type-h2:       2.5rem / 3rem;      /* 40px / 48px */
+  --type-h3:       2rem / 2.5rem;      /* 32px / 40px */
+  --type-h4:       1.5rem / 2rem;      /* 24px / 32px */
+  --type-h5:       1.25rem / 1.75rem;  /* 20px / 28px */
+  --type-h6:       1.125rem / 1.625rem;/* 18px / 26px */
+  --type-body-lg:  1.125rem / 1.75rem; /* 18px / 28px */
+  --type-body:     1rem / 1.5rem;      /* 16px / 24px */
+  --type-body-sm:  0.875rem / 1.375rem;/* 14px / 22px */
+  --type-sub:      1.25rem / 1.75rem;  /* 20px / 28px — DM Sans */
+  --type-cap:      0.75rem / 1.125rem; /* 12px / 18px — DM Sans */
+}
+
+/* ── Premium text rendering ──────────────────────────────────────────────── */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Hind', Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Base typography — semantic element defaults ─────────────────────────── */
+/* These apply when no explicit Tailwind utility overrides are present.       */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Hind', Tahoma, sans-serif;
+    font-weight: 600;
+  }
+  /* Mobile-first heading sizes */
+  h1 { font-size: 2rem;     line-height: 2.5rem;   }  /* 32px / 40px  */
+  h2 { font-size: 1.75rem;  line-height: 2.25rem;  }  /* 28px / 36px  */
+  h3 { font-size: 1.5rem;   line-height: 2rem;     }  /* 24px / 32px  */
+  h4 { font-size: 1.5rem;   line-height: 2rem;     font-weight: 500; }
+  h5 { font-size: 1.25rem;  line-height: 1.75rem;  font-weight: 500; }
+  h6 { font-size: 1.125rem; line-height: 1.625rem; font-weight: 500; }
+  /* Scale up at desktop */
+  @media (min-width: 1024px) {
+    h1 { font-size: 3rem;   line-height: 3.5rem;  }   /* 48px / 56px  */
+    h2 { font-size: 2.5rem; line-height: 3rem;    }   /* 40px / 48px  */
+    h3 { font-size: 2rem;   line-height: 2.5rem;  }   /* 32px / 40px  */
+  }
+  p {
+    font-family: 'Hind', Tahoma, sans-serif;
+    font-size: 1rem;    /* 16px */
+    line-height: 1.5rem;/* 24px */
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  /* ── Global section padding ───────────────────────────────────────────────
+     Used by every full-width page section and inner-page layouts.
+     mobile  : px 20px  / py 48px
+     tablet  : px 60px  / py 60px
+     desktop : px 120px / py 80px
+  ── */
+  .section-pad {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  @media (min-width: 768px) {
+    .section-pad {
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-pad {
+      padding-left: 120px;
+      padding-right: 120px;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+  /* Sidebar: hide scrollbar at rest, reveal brand thumb on hover */
+  .sidebar-scroll {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.25s ease;
+  }
+  .sidebar-scroll:hover {
+    scrollbar-color: #5B1027 transparent;
+  }
+  .sidebar-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  .sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .sidebar-scroll::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 4px;
+    transition: background-color 0.25s ease;
+  }
+  .sidebar-scroll:hover::-webkit-scrollbar-thumb {
+    background-color: #5B1027;
+  }
+
+  /* Premium card: subtle lift + brand shadow on hover */
+  .premium-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .premium-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -12px rgba(91, 16, 39, 0.18);
+  }
+
+  /* Brand-tinted alternate section background */
+  .section-soft {
+    background-color: #fdf8f3;
+  }
+
+  /* Highlight CTA button */
+  .btn-highlight {
+    background-color: #C32033;
+    color: #fff;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .btn-highlight:hover {
+    background-color: #a81b2a;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px -4px rgba(195, 32, 51, 0.45);
+  }
+
+  /* Smooth link transitions */
+  a {
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+}
+
+/* ── Notice bar ticker ───────────────────────────────────────────────────── */
+@keyframes noticeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.notice-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: noticeScroll 40s linear infinite;
+}
+.notice-ticker-track:hover {
+  animation-play-state: paused;
+}
