@@ -5,17 +5,42 @@ import Footer from '../components/Footer';
 
 const disclosures = [
   {
-    category: 'AICTE Approvals & Affiliation',
+    category: 'AICTE Extension of Approval (EOA) / Letter of Approval (LOA)',
     items: [
-      { label: 'AICTE Approval Letter 2024–25', href: 'https://www.glwec.in/downloads/AICTE_Approval_2024-25.pdf' },
-      { label: 'AICTE Approval Letter 2023–24', href: 'https://www.glwec.in/downloads/AICTE_Approval_2023-24.pdf' },
-      { label: 'Osmania University Affiliation Letter', href: 'https://www.glwec.in/downloads/OU_Affiliation.pdf' },
+      { label: 'EOA Report 2025–26', href: '/downloads/mandatory-disclosures/eoa-report-2025-26.pdf' },
+      { label: 'EOA Report 2024–25', href: '/downloads/mandatory-disclosures/eoa-report-2024-25.pdf' },
+      { label: 'EOA Report 2023–24', href: '/downloads/mandatory-disclosures/eoa-report-2023-24.pdf' },
+      { label: 'EOA Report 2022–23', href: '/downloads/mandatory-disclosures/eoa-report-2022-23.pdf' },
+      { label: 'LOA Report 2021–22', href: '/downloads/mandatory-disclosures/loa-report-2021-22.pdf' },
+    ],
+  },
+  {
+    category: 'AICTE Mandatory Disclosure',
+    items: [
+      { label: 'AICTE Mandatory Disclosure 2024–25', href: '/downloads/mandatory-disclosures/aicte-mandatorydisclosure-24-25.pdf' },
+    ],
+  },
+  {
+    category: 'Annual Report & Financials',
+    items: [
+      { label: 'Annual Report 2023–2024', href: '/downloads/mandatory-disclosures/annual-report-2023-2024.pdf' },
+      { label: 'Balance Sheet 2023–24', href: '/downloads/mandatory-disclosures/2023-2024.pdf' },
+      { label: 'Balance Sheet 2022–23', href: '/downloads/mandatory-disclosures/2022-2023.pdf' },
+    ],
+  },
+  {
+    category: 'Osmania University Affiliation',
+    items: [
+      { label: 'OU Affiliation 2024–25', href: '/downloads/mandatory-disclosures/ou-affiliation-2024-25.pdf' },
+      { label: 'OU Affiliation 2023–24', href: '/downloads/mandatory-disclosures/ou-affiliation-2023-24.pdf' },
+      { label: 'OU Affiliation 2022–23', href: '/downloads/mandatory-disclosures/ou-affiliation-2022-23.pdf' },
+      { label: 'OU Affiliation 2021–22', href: '/downloads/mandatory-disclosures/ou-affiliation-2021-22.pdf' },
     ],
   },
   {
     category: 'Fee Structure',
     items: [
-      { label: 'Fee Structure 2024–25 (Approved)', href: 'https://www.glwec.in/downloads/Fee_Structure_2024-25.pdf' },
+      { label: 'Fee Structure (Current)', href: '/admissions/fee-structure' },
       { label: 'Fee Refund Policy', href: '/admissions/fee-refund' },
     ],
   },
@@ -50,8 +75,8 @@ const disclosures = [
   {
     category: 'RTI & Ombudsperson',
     items: [
-      { label: 'RTI Act — Public Information Officer Details', href: '/administration#rti' },
-      { label: 'Ombudsperson Details', href: '/administration#ombudsperson' },
+      { label: 'RTI Act — Public Information Officer Details', href: '/administration/rti' },
+      { label: 'Ombudsperson Details', href: '/administration/ombudsperson' },
     ],
   },
 ];

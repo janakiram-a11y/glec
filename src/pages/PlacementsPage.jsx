@@ -121,12 +121,26 @@ export default function PlacementsPage() {
                 Training &amp; Placements
               </h2>
             </div>
-            <div className="flex flex-col gap-4">
-              {college.placementsDescription.map((para, i) => (
-                <p key={i} className="font-hind font-normal text-[15px] leading-[27px] text-[#474747]">
-                  {para}
-                </p>
-              ))}
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 items-start">
+              <div className="flex flex-col gap-4">
+                {college.placementsDescription.map((para, i) => (
+                  <p key={i} className="font-hind font-normal text-[15px] leading-[27px] text-[#474747]">
+                    {para}
+                  </p>
+                ))}
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {['/images/placements/placements.jpg', '/images/placements/placement272.jpg.jpeg'].map((src, i) => (
+                  <div key={i} className="aspect-square rounded-xl overflow-hidden" style={{ backgroundColor: `${college.primaryColor}08` }}>
+                    <img
+                      src={src}
+                      alt="Placements at GLEC"
+                      className="w-full h-full object-cover"
+                      onError={(e) => { e.currentTarget.parentElement.style.display = 'none'; }}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 

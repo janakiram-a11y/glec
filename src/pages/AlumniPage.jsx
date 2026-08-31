@@ -75,9 +75,52 @@ export default function AlumniPage() {
             <p className="font-hind text-[16px] leading-7 text-[#555555] mb-4">
               Gokaraju Lailavathi Engineering College Alumni Association (GLECAA) connects graduates with the institution and with each other. Whether you graduated recently or years ago, the GLEC alumni network is your lifelong professional home.
             </p>
-            <p className="font-hind text-[16px] leading-7 text-[#555555]">
+            <p className="font-hind text-[16px] leading-7 text-[#555555] mb-6">
               As a sister institution of GRIET, GLEC alumni benefit from a combined network of thousands of engineers, technologists, and leaders across India and abroad. We host reunions, professional events, mentorship programmes, and industry connect sessions throughout the year.
             </p>
+            <blockquote
+              className="text-left rounded-xl p-6"
+              style={{ backgroundColor: '#F6F1F2', borderLeft: `4px solid ${college.primaryColor}` }}
+            >
+              <p className="font-hind italic text-[15px] leading-7 text-[#474747]">
+                "{college.alumniAssociation.mission}"
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Alumni Association Committee */}
+      <section className="w-full section-pad bg-white">
+        <div className="max-w-[1320px] mx-auto px-5 md:px-[60px]">
+          <div className="text-center mb-10 max-w-[820px] mx-auto">
+            <h2 className="font-hind font-semibold text-[26px] lg:text-[32px] mb-4" style={{ color: college.primaryColor }}>
+              Alumni Association Committee
+            </h2>
+            <p className="font-hind text-[15px] leading-7 text-[#555555]">
+              {college.alumniAssociation.description}
+            </p>
+          </div>
+          <div className="overflow-x-auto rounded-xl border" style={{ borderColor: `${college.primaryColor}18` }}>
+            <table className="w-full min-w-[560px]">
+              <thead>
+                <tr style={{ backgroundColor: college.primaryColor }}>
+                  {['S.No.', 'Name', 'Position', 'Role'].map(h => (
+                    <th key={h} className="text-left font-dm-sans font-semibold text-[13px] text-white px-5 py-3.5">{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {college.alumniAssociation.members.map((m) => (
+                  <tr key={m.sno} style={{ backgroundColor: m.sno % 2 === 0 ? '#FAFAFA' : '#fff' }}>
+                    <td className="px-5 py-3.5 font-dm-sans text-[14px] text-[#374151]">{m.sno}</td>
+                    <td className="px-5 py-3.5 font-dm-sans font-semibold text-[14px]" style={{ color: college.primaryColor }}>{m.name}</td>
+                    <td className="px-5 py-3.5 font-dm-sans text-[14px] text-[#374151]">{m.position}</td>
+                    <td className="px-5 py-3.5 font-dm-sans text-[14px] text-[#374151]">{m.role}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

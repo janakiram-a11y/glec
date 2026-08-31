@@ -81,8 +81,10 @@ function CommitteeContent() {
         members={ec.members}
         columns={[
           { key: 'name',          label: 'Name',          accent: true },
+          { key: 'staffId',       label: 'Staff ID' },
           { key: 'designation',   label: 'Designation' },
           { key: 'qualification', label: 'Qualification' },
+          { key: 'doj',           label: 'Date of Joining' },
           { key: 'phone',         label: 'Contact' },
         ]}
       />

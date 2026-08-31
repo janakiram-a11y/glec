@@ -24,9 +24,13 @@ const ChevronRight = () => (
   </svg>
 );
 
+const ACTIVE_DEPARTMENT_SLUGS = ['cse', 'cse-aiml'];
+
 export default function DepartmentPage() {
   const { slug } = useParams();
-  const dept = college.departments?.find(d => d.slug === slug);
+  const dept = ACTIVE_DEPARTMENT_SLUGS.includes(slug)
+    ? college.departments?.find(d => d.slug === slug)
+    : null;
 
   if (!dept) {
     return (
@@ -185,6 +189,47 @@ export default function DepartmentPage() {
         </div>
       </div>
 
+      {/* ── Syllabus ─────────────────────────────────────────────────────── */}
+      {dept.syllabus && dept.syllabus.length > 0 && (
+        <div className="w-full bg-white section-pad">
+          <div className="flex flex-col gap-2 mb-2">
+            <h2 className="font-hind font-bold text-[24px] leading-tight" style={{ color: primaryColor }}>
+              Syllabus
+            </h2>
+            <div className="w-14 h-[3px] rounded-full" style={{ backgroundColor: accentColor }} />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {dept.syllabus.map((batch, i) => (
+              <div key={i} className="rounded-xl border p-5" style={{ borderColor: '#E5E7EB' }}>
+                <p className="font-hind font-semibold text-[14px] mb-3" style={{ color: primaryColor }}>
+                  {batch.batch}
+                </p>
+                <ul className="flex flex-col gap-2">
+                  {batch.semesters.map((s, j) => (
+                    <li key={j}>
+                      <a
+                        href={s.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between gap-3 group"
+                      >
+                        <span className="flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: accentColor }} />
+                          <span className="font-dm-sans text-[13px] text-[#374151] group-hover:underline">{s.label}</span>
+                        </span>
+                        <span className="font-dm-sans font-semibold text-[11px] flex-shrink-0" style={{ color: accentColor }}>
+                          PDF ↓
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* ── HOD Profile ─────────────────────────────────────────────────── */}
       {dept.hod && (
         <div className="w-full bg-[#F6F1F2] section-pad">
@@ -315,24 +360,50 @@ export default function DepartmentPage() {
       {/* ── Faculty ─────────────────────────────────────────────────────── */}
       {dept.faculty && dept.faculty.length > 0 && (
         <div className="w-full bg-white section-pad">
-          <div className="flex flex-col gap-2 mb-8">
-            <h2 className="font-hind font-bold text-[24px] leading-tight" style={{ color: primaryColor }}>
-              Faculty
-            </h2>
-            <div className="w-14 h-[3px] rounded-full" style={{ backgroundColor: accentColor }} />
+          <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
+            <div className="flex flex-col gap-2">
+              <h2 className="font-hind font-bold text-[24px] leading-tight" style={{ color: primaryColor }}>
+                Faculty
+              </h2>
+              <div className="w-14 h-[3px] rounded-full" style={{ backgroundColor: accentColor }} />
+            </div>
+            {dept.facultyPdf && (
+              <a
+                href={dept.facultyPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-dm-sans font-semibold text-[13px] hover:underline"
+                style={{ color: accentColor }}
+              >
+                Download Faculty List (PDF) ↓
+              </a>
+            )}
           </div>
           <div className="overflow-x-auto rounded-xl border border-[#E5E7EB]">
-            <table className="w-full" style={{ minWidth: 700 }}>
+            <table className="w-full" style={{ minWidth: 760 }}>
               <thead>
                 <tr style={{ backgroundColor: primaryColor }}>
-                  {['S.No.', 'Staff ID', 'Name', 'Designation', 'Qualification', 'Date of Joining', 'Email'].map(h => (
-                    <th key={h} className="text-left font-dm-sans font-semibold text-[12px] text-white px-4 py-3 whitespace-nowrap">{h}</th>
+                  {['', 'S.No.', 'Staff ID', 'Name', 'Designation', 'Qualification', 'Date of Joining', 'Email'].map((h, hi) => (
+                    <th key={hi} className="text-left font-dm-sans font-semibold text-[12px] text-white px-4 py-3 whitespace-nowrap">{h}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {dept.faculty.map((f, i) => (
                   <tr key={i} style={{ backgroundColor: i % 2 === 0 ? '#fff' : '#FAFAFA' }}>
+                    <td className="px-4 py-2">
+                      {f.image ? (
+                        <img
+                          src={f.image}
+                          alt={f.name}
+                          className="w-9 h-9 rounded-full object-cover object-top"
+                          style={{ border: `1px solid ${primaryColor}30` }}
+                          onError={(e) => { e.currentTarget.style.visibility = 'hidden'; }}
+                        />
+                      ) : (
+                        <div className="w-9 h-9 rounded-full" style={{ backgroundColor: `${primaryColor}10` }} />
+                      )}
+                    </td>
                     <td className="px-4 py-3 font-dm-sans text-[13px] text-[#374151]">{i + 1}</td>
                     <td className="px-4 py-3 font-dm-sans text-[13px] text-[#374151] whitespace-nowrap">{f.id ?? '—'}</td>
                     <td className="px-4 py-3 font-dm-sans font-semibold text-[13px] whitespace-nowrap" style={{ color: primaryColor }}>{f.name}</td>

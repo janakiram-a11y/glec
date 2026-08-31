@@ -5,6 +5,7 @@ import StatsBar from '../components/StatsBar';
 import QuickLinksBar from '../components/QuickLinksBar';
 import WhyChooseUs from '../components/WhyChooseUs';
 import NewsEvents from '../components/NewsEvents';
+import NewsCarousel from '../components/NewsCarousel';
 import AccreditationSection from '../components/AccreditationSection';
 import AcademicPrograms from '../components/AcademicPrograms';
 import CareerOutcomes from '../components/CareerOutcomes';
@@ -21,6 +22,7 @@ export default function GlecPage() {
       <WhyChooseUs college={college} />
       <StatsBar college={college} />
       <NewsEvents college={college} />
+      <NewsCarousel college={college} />
       <AccreditationSection college={college} />
       <AcademicPrograms college={college} />
       <CareerOutcomes college={college} />

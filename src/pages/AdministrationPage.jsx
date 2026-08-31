@@ -77,7 +77,17 @@ function CommitteeTable({ members, columns }) {
                   className="font-dm-sans font-normal text-[14px] text-[#374151] px-5 py-3.5"
                   style={col.accent ? { color: college.primaryColor, fontWeight: 600 } : {}}
                 >
-                  {m[col.key] ?? '—'}
+                  {col.avatar ? (
+                    <img
+                      src={m[col.key]}
+                      alt={m.name}
+                      className="w-10 h-10 rounded-full object-cover object-top"
+                      style={{ border: `1.5px solid ${college.primaryColor}30` }}
+                      onError={(e) => { e.currentTarget.style.visibility = 'hidden'; }}
+                    />
+                  ) : (
+                    m[col.key] ?? '—'
+                  )}
                 </td>
               ))}
             </tr>
@@ -228,6 +238,7 @@ function GoverningBodyContent() {
         members={gb.members}
         columns={[
           { key: 'no', label: 'S.No.' },
+          { key: 'image', label: 'Photo', avatar: true },
           { key: 'name', label: 'Name', accent: true },
           { key: 'role', label: 'Role' },
           { key: 'category', label: 'Category' },
@@ -349,6 +360,14 @@ function PrincipalContent() {
             >
               {pp.publications}
             </div>
+            {pp.researchProjects && (
+              <div
+                className="px-4 py-2 rounded-lg text-[13px] font-dm-sans font-semibold"
+                style={{ backgroundColor: `${college.accentColor}18`, color: '#7a5a0a' }}
+              >
+                {pp.researchProjects}
+              </div>
+            )}
             {pp.memberships.map((m) => (
               <div
                 key={m}
@@ -403,6 +422,14 @@ function AntiRaggingContent() {
   return (
     <>
       <SectionHeader label="Student Safety" title="Anti Ragging Committee" />
+      {ar.image && (
+        <img
+          src={ar.image}
+          alt="Anti-Ragging Committee at GLEC"
+          className="w-full max-h-[280px] object-cover rounded-2xl mb-8"
+          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+        />
+      )}
       <SectionDesc text={ar.description} />
       <CommitteeTable
         members={ar.members}
@@ -412,6 +439,20 @@ function AntiRaggingContent() {
           { key: 'phone', label: 'Contact' },
         ]}
       />
+      {ar.studentMembers && ar.studentMembers.length > 0 && (
+        <div className="mt-8">
+          <p className="font-hind font-semibold text-[15px] mb-4" style={{ color: college.primaryColor }}>
+            Student Committee Members
+          </p>
+          <CommitteeTable
+            members={ar.studentMembers}
+            columns={[
+              { key: 'name', label: 'Name', accent: true },
+              { key: 'role', label: 'Role' },
+            ]}
+          />
+        </div>
+      )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
         <div>
           <p className="font-hind font-semibold text-[15px] mb-4" style={{ color: college.primaryColor }}>
@@ -602,6 +643,23 @@ function EqualOpportunityContent() {
           <ObjectivesList items={eoc.activities} />
         </div>
       </div>
+      {eoc.activityPhotos && eoc.activityPhotos.length > 0 && (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+          {eoc.activityPhotos.map((p, i) => (
+            <div key={i} className="rounded-2xl overflow-hidden" style={{ border: `1px solid ${college.primaryColor}15` }}>
+              <div className="aspect-[4/3]" style={{ backgroundColor: `${college.primaryColor}08` }}>
+                <img
+                  src={p.image}
+                  alt={p.caption}
+                  className="w-full h-full object-cover"
+                  onError={(e) => { e.currentTarget.parentElement.parentElement.style.display = 'none'; }}
+                />
+              </div>
+              <p className="font-dm-sans text-[12.5px] text-center py-2" style={{ color: college.primaryColor }}>{p.caption}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 }
@@ -621,12 +679,64 @@ function IccContent() {
           { key: 'phone', label: 'Contact' },
         ]}
       />
-      <div className="mt-10">
-        <p className="font-hind font-semibold text-[15px] mb-4" style={{ color: college.primaryColor }}>
-          Committee Objectives
-        </p>
-        <ObjectivesList items={icc.objectives} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+        <div>
+          <p className="font-hind font-semibold text-[15px] mb-4" style={{ color: college.primaryColor }}>
+            Committee Objectives
+          </p>
+          <ObjectivesList items={icc.objectives} />
+        </div>
+        <div>
+          <p className="font-hind font-semibold text-[15px] mb-4" style={{ color: college.primaryColor }}>
+            Functions of the Committee
+          </p>
+          <ObjectivesList items={icc.functions} />
+        </div>
       </div>
+    </>
+  );
+}
+
+function OmbudspersonContent() {
+  const o = college.ombudsperson;
+  return (
+    <>
+      <SectionHeader label="Grievance Escalation" title="Ombudsperson" />
+      <SectionDesc text={o.description} />
+      <div
+        className="rounded-2xl p-8 flex flex-col gap-2"
+        style={{ backgroundColor: `${college.primaryColor}08`, border: `1px solid ${college.primaryColor}15` }}
+      >
+        <p className="font-hind font-bold text-[18px]" style={{ color: college.primaryColor }}>{o.name}</p>
+        <p className="font-dm-sans font-semibold text-[14px]" style={{ color: college.accentColor }}>{o.title}</p>
+        <p className="font-dm-sans text-[13px] text-[#6B7280] mb-3">{o.subtitle}</p>
+        <p className="font-dm-sans text-[13px] leading-[22px] text-[#374151]">{o.address}</p>
+        <a href={`mailto:${o.email}`} className="font-dm-sans text-[13px] hover:underline" style={{ color: college.primaryColor }}>{o.email}</a>
+        <span className="font-dm-sans text-[13px] text-[#374151]">Landline: {o.phone}</span>
+      </div>
+    </>
+  );
+}
+
+function RtiActContent() {
+  const rti = college.rtiAct;
+  return (
+    <>
+      <SectionHeader label="Transparency" title="RTI Act" />
+      <SectionDesc text={rti.description} />
+      <p className="font-hind font-semibold text-[15px] mb-4" style={{ color: college.primaryColor }}>
+        Public Information Officers
+      </p>
+      <CommitteeTable
+        members={rti.officers}
+        columns={[
+          { key: 'name', label: 'Name', accent: true },
+          { key: 'designation', label: 'Designation' },
+          { key: 'role', label: 'Role' },
+          { key: 'email', label: 'Email' },
+          { key: 'phone', label: 'Contact' },
+        ]}
+      />
     </>
   );
 }
@@ -713,6 +823,18 @@ const SECTIONS = [
     path: '/administration/icc',
     label: 'ICC',
     content: <IccContent />,
+  },
+  {
+    id: 'ombudsperson',
+    path: '/administration/ombudsperson',
+    label: 'Ombudsperson',
+    content: <OmbudspersonContent />,
+  },
+  {
+    id: 'rti',
+    path: '/administration/rti',
+    label: 'RTI Act',
+    content: <RtiActContent />,
   },
 ];
 

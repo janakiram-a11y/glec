@@ -404,6 +404,19 @@ function DeptCard({ dept }) {
               {dept.phone}
             </a>
           )}
+          {dept.note && (
+            <span className="font-dm-sans text-[11.5px] text-[#6B7280] truncate">
+              {dept.note}
+            </span>
+          )}
+          {dept.link && (
+            <a href={dept.link}
+              className="font-dm-sans text-[11.5px] font-semibold hover:underline transition-colors"
+              style={{ color: primary }}
+            >
+              Submit a grievance →
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -476,6 +489,28 @@ export default function ContactPage() {
       <section className="section-pad" style={{ backgroundColor: '#F8F5F6' }}>
         <SectionHeader eyebrow="Contact Information" title="How to Reach Us" />
         <InfoCards />
+
+        {/* 24x7 Women's Helpline */}
+        <div
+          className="mt-6 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+          style={{ backgroundColor: `${accent}12`, border: `1.5px solid ${accent}30` }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: accent, color: '#fff' }}>
+              <div className="w-4.5 h-4.5" style={{ width: 18, height: 18 }}>{Ico.phone}</div>
+            </div>
+            <p className="font-hind font-semibold text-[14.5px]" style={{ color: primary }}>
+              24×7 Women's Helpline
+            </p>
+          </div>
+          <a
+            href={`tel:${ct.womensHelpline}`}
+            className="font-hind font-bold text-[16px] hover:underline"
+            style={{ color: accent }}
+          >
+            {ct.womensHelpline}
+          </a>
+        </div>
       </section>
 
       {/* ── Form + Department contacts ─────────────────────────────────── */}
@@ -523,6 +558,39 @@ export default function ContactPage() {
               <p className="font-dm-sans text-[12.5px] text-[#9CA3AF] mt-3">
                 Stay updated with campus events, news, and announcements.
               </p>
+            </div>
+
+            {/* AICTE feedback links */}
+            <div
+              className="rounded-2xl p-6"
+              style={{ backgroundColor: `${primary}05`, border: `1.5px solid ${primary}0A` }}
+            >
+              <p
+                className="font-dm-sans font-semibold text-[11px] uppercase tracking-[0.2em] mb-4"
+                style={{ color: `${primary}70` }}
+              >
+                AICTE Feedback
+              </p>
+              <div className="flex flex-col gap-2">
+                <a
+                  href={ct.aicteFeedback.faculty}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-dm-sans text-[13px] hover:underline"
+                  style={{ color: primary }}
+                >
+                  AICTE Faculty Feedback →
+                </a>
+                <a
+                  href={ct.aicteFeedback.student}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-dm-sans text-[13px] hover:underline"
+                  style={{ color: primary }}
+                >
+                  AICTE Student Feedback →
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -251,10 +251,19 @@ function FacilitiesContent() {
                     className="flex items-start gap-3 p-4 rounded-xl"
                     style={{ backgroundColor: `${primary}05`, border: `1px solid ${primary}10` }}
                   >
-                    <span
-                      className="mt-[3px] w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: accent }}
-                    />
+                    {eq.image ? (
+                      <img
+                        src={eq.image}
+                        alt={eq.name}
+                        className="w-14 h-14 rounded-lg object-cover flex-shrink-0"
+                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                      />
+                    ) : (
+                      <span
+                        className="mt-[3px] w-1.5 h-1.5 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: accent }}
+                      />
+                    )}
                     <div>
                       <p className="font-dm-sans font-semibold text-[13px]" style={{ color: primary }}>
                         {eq.name}
@@ -312,14 +321,14 @@ function AwardsContent() {
       {/* Photo gallery placeholders */}
       <SubHeading>Award Gallery</SubHeading>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {['research-awards.jpg', 'research-awards2.jpg'].map((img) => (
+        {['Research Awards(2025).png', 'research-awards.jpg', 'research-awards2.jpg'].map((img) => (
           <div
             key={img}
             className="aspect-[4/3] rounded-2xl overflow-hidden"
             style={{ backgroundColor: `${primary}08`, border: `1px solid ${primary}12` }}
           >
             <img
-              src={`https://www.glwec.in/images/${img}`}
+              src={`/images/research/awards/${encodeURIComponent(img)}`}
               alt="Research Awards at GLEC"
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -400,6 +409,24 @@ function PhdAwardedContent() {
             ))}
           </tbody>
         </table>
+      </div>
+
+      <SubHeading>Ph.D Award Gallery</SubHeading>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-2">
+        {[1, 2, 3, 4, 5, 6].map((n) => (
+          <div
+            key={n}
+            className="aspect-square rounded-2xl overflow-hidden"
+            style={{ backgroundColor: `${primary}08`, border: `1px solid ${primary}12` }}
+          >
+            <img
+              src={`/images/research/phd-awards/${n}.jpg`}
+              alt="Ph.D award recipient at GLEC"
+              className="w-full h-full object-cover"
+              onError={(e) => { e.currentTarget.parentElement.style.display = 'none'; }}
+            />
+          </div>
+        ))}
       </div>
 
       <InfoCallout>

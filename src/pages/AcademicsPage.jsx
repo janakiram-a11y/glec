@@ -206,6 +206,7 @@ function IqacContent() {
         columns={[
           { key: 'name',        label: 'Name', accent: true },
           { key: 'designation', label: 'Designation' },
+          { key: 'category',    label: 'Category' },
           { key: 'role',        label: 'Role in IQAC' },
         ]}
       />
@@ -249,6 +250,9 @@ function LibraryContent() {
           >
             <p className="font-hind font-bold text-[22px]" style={{ color: primary }}>{s.value}</p>
             <p className="font-dm-sans text-[11px] text-[#6B7280] mt-1 leading-tight">{s.label}</p>
+            {s.required && (
+              <p className="font-dm-sans text-[10px] text-[#9CA3AF] mt-0.5 leading-tight">{s.required}</p>
+            )}
           </div>
         ))}
       </div>
@@ -363,7 +367,7 @@ function RulesContent() {
           </p>
         </div>
         <a
-          href="https://www.glwec.in/downloads/BE_Rules_Regulations_2020.pdf"
+          href="/downloads/academics/be-rules-regulations-2020.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-dm-sans font-semibold text-[13px] text-white transition-opacity hover:opacity-90 flex-shrink-0"
