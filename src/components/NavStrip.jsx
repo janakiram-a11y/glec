@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { withAlpha } from '../theme';
+import { buildSearchIndex } from '../utils/searchIndex';
 import NoticeBar from './NoticeBar';
 
 function useIsDesktop() {
@@ -214,6 +215,85 @@ function MobileNavItem({ name, href, dropdown, college }) {
   );
 }
 
+function MobileSearchPanel({ college, onNavigate }) {
+  const [query, setQuery] = useState('');
+  const navigate = useNavigate();
+  const inputRef = useRef(null);
+  const index = buildSearchIndex(college);
+
+  const results = query.trim().length > 0
+    ? index.filter(({ label, category }) =>
+        `${label} ${category}`.toLowerCase().includes(query.trim().toLowerCase())
+      ).slice(0, 8)
+    : [];
+
+  useEffect(() => { inputRef.current?.focus(); }, []);
+
+  function go(href) {
+    onNavigate();
+    if (href.startsWith('http')) window.open(href, '_blank', 'noopener,noreferrer');
+    else navigate(href);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (results.length) go(results[0].href);
+  }
+
+  return (
+    <div className="p-4" style={{ backgroundColor: withAlpha('#000000', 0.15) }}>
+      <form onSubmit={handleSubmit} className="flex items-center">
+        <input
+          ref={inputRef}
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search pages…"
+          autoComplete="off"
+          className="font-dm-sans text-[14px] text-gray-800 placeholder-gray-400 border-none rounded-l px-3 h-[42px] flex-1 min-w-0 focus:outline-none bg-white"
+        />
+        <button
+          type="submit"
+          className="h-[42px] w-[46px] flex items-center justify-center text-white rounded-r flex-shrink-0"
+          style={{ backgroundColor: college.accentColor }}
+          aria-label="Search"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.2} viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" strokeLinecap="round" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35" />
+          </svg>
+        </button>
+      </form>
+
+      {query.trim().length > 0 && (
+        <div className="mt-2 bg-white rounded-md shadow-lg overflow-hidden max-h-[50vh] overflow-y-auto">
+          {results.length > 0 ? (
+            results.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => go(item.href)}
+                className="w-full text-left px-3 py-2.5 flex items-center justify-between gap-3 border-b last:border-b-0 border-gray-100"
+              >
+                <span className="font-dm-sans text-[13px] text-gray-800 truncate">{item.label}</span>
+                <span
+                  className="font-dm-sans text-[10px] font-semibold uppercase tracking-wide flex-shrink-0 px-1.5 py-0.5 rounded"
+                  style={{ color: college.primaryColor, backgroundColor: withAlpha(college.primaryColor, 0.08) }}
+                >
+                  {item.category}
+                </span>
+              </button>
+            ))
+          ) : (
+            <div className="px-3 py-2.5">
+              <span className="font-dm-sans text-[13px] text-gray-400">No pages found for "{query}"</span>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function useScrolled(threshold = 10) {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -227,11 +307,12 @@ function useScrolled(threshold = 10) {
 
 export default function NavStrip({ college }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const location = useLocation();
   const isDesktop = useIsDesktop();
   const scrolled = useScrolled();
 
-  useEffect(() => { setMobileOpen(false); }, [location.pathname]);
+  useEffect(() => { setMobileOpen(false); setMobileSearchOpen(false); }, [location.pathname]);
 
   const navTop = isDesktop ? (scrolled ? '77px' : '113px') : '56px';
 
@@ -258,23 +339,46 @@ export default function NavStrip({ college }) {
         <span className="font-dm-sans font-bold text-white text-[13px] uppercase tracking-wider">
           Navigation
         </span>
-        <button
-          onClick={() => setMobileOpen((v) => !v)}
-          className="text-white p-2 -mr-2"
-          aria-label="Toggle navigation menu"
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+        <div className="flex items-center gap-1">
+          <button
+            onClick={() => { setMobileSearchOpen((v) => !v); setMobileOpen(false); }}
+            className="text-white p-2"
+            aria-label="Toggle search"
+            aria-expanded={mobileSearchOpen}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8" strokeLinecap="round" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35" />
             </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+          </button>
+          <button
+            onClick={() => { setMobileOpen((v) => !v); setMobileSearchOpen(false); }}
+            className="text-white p-2 -mr-2"
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile search panel */}
+      {mobileSearchOpen && (
+        <div
+          className="lg:hidden absolute top-full left-0 right-0 z-50 shadow-xl"
+          style={{ backgroundColor: college.primaryColor }}
+        >
+          <MobileSearchPanel college={college} onNavigate={() => setMobileSearchOpen(false)} />
+        </div>
+      )}
 
       {/* Mobile menu drawer */}
       {mobileOpen && (

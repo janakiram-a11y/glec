@@ -34,6 +34,31 @@ export default function AdminSidebarLayout({
         bgImage={college.heroBgImage}
       />
 
+      {/* Mobile/tablet horizontal section nav */}
+      <div
+        className="lg:hidden w-full bg-white border-b overflow-x-auto"
+        style={{ borderColor: `${college.primaryColor}18` }}
+      >
+        <div className="flex px-4 py-2.5 gap-2 min-w-max">
+          {sidebarSections.map((s) => {
+            const isActive = s.id === currentSection?.id;
+            return (
+              <Link
+                key={s.id}
+                to={s.path}
+                className="px-3 py-1.5 rounded-full font-dm-sans font-semibold text-[12px] whitespace-nowrap transition-colors flex-shrink-0"
+                style={{
+                  color: isActive ? '#fff' : college.primaryColor,
+                  backgroundColor: isActive ? college.primaryColor : `${college.primaryColor}12`,
+                }}
+              >
+                {s.label}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
       <main className="flex-1 section-pad">
         <div className="max-w-[1320px] mx-auto px-5 md:px-[60px]">
           <div className="flex gap-8 items-start">

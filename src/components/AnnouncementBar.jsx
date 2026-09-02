@@ -22,7 +22,7 @@ function LOIModal({ college, onClose }) {
       aria-labelledby="loi-modal-title"
       onClick={onClose}
     >
-      <div className="relative bg-white rounded-xl shadow-2xl max-w-[620px] w-[90%] p-10" onClick={(e) => e.stopPropagation()}>
+      <div className="relative bg-white rounded-xl shadow-2xl max-w-[620px] w-[90%] p-6 sm:p-10" onClick={(e) => e.stopPropagation()}>
         <button
           ref={closeRef}
           onClick={onClose}

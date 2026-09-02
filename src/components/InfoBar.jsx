@@ -1,25 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { withAlpha } from '../theme';
-
-function buildIndex(college) {
-  const entries = [];
-
-  const add = (label, href, category) => {
-    if (label && href) entries.push({ label, href, category });
-  };
-
-  for (const link of college.navLinks || []) {
-    add(link.name, link.href, 'Page');
-    for (const item of link.dropdown || []) add(item.label, item.href, link.name);
-  }
-  for (const item of college.quickLinks || []) add(item.label, item.href, 'Quick Links');
-  for (const item of college.resources || []) add(item.label, item.href, 'Resources');
-
-  // Deduplicate by href
-  const seen = new Set();
-  return entries.filter(({ href }) => seen.has(href) ? false : seen.add(href));
-}
+import { buildSearchIndex } from '../utils/searchIndex';
 
 export default function InfoBar({ college }) {
   const [query, setQuery] = useState('');
@@ -29,7 +11,7 @@ export default function InfoBar({ college }) {
   const wrapRef = useRef(null);
   const inputRef = useRef(null);
 
-  const index = buildIndex(college);
+  const index = buildSearchIndex(college);
 
   const results = query.trim().length > 0
     ? index.filter(({ label, category }) =>
