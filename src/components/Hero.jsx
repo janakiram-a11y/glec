@@ -31,8 +31,7 @@ export default function Hero({ college }) {
           />
         ))}
       </div>
-      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(91,16,39,0.65)' }} />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#5B1027] via-[#5B1027]/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#5B1027] via-[#5B1027]/60 to-transparent" />
 
       {slides.length > 1 && (
         <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
