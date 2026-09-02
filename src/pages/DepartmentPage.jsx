@@ -24,13 +24,9 @@ const ChevronRight = () => (
   </svg>
 );
 
-const ACTIVE_DEPARTMENT_SLUGS = ['cse', 'cse-aiml'];
-
 export default function DepartmentPage() {
   const { slug } = useParams();
-  const dept = ACTIVE_DEPARTMENT_SLUGS.includes(slug)
-    ? college.departments?.find(d => d.slug === slug)
-    : null;
+  const dept = college.departments?.find(d => d.slug === slug);
 
   if (!dept) {
     return (
@@ -85,10 +81,14 @@ export default function DepartmentPage() {
           <span className="font-dm-sans font-semibold text-[13px]" style={{ color: primaryColor }}>
             Est. {dept.established}
           </span>
-          <span className="text-[10px]" style={{ color: accentColor }}>●</span>
-          <span className="font-dm-sans font-semibold text-[13px]" style={{ color: primaryColor }}>
-            {dept.degree} Intake: {dept.ugIntake}
-          </span>
+          {dept.ugIntake != null && (
+            <>
+              <span className="text-[10px]" style={{ color: accentColor }}>●</span>
+              <span className="font-dm-sans font-semibold text-[13px]" style={{ color: primaryColor }}>
+                {dept.degree} Intake: {dept.ugIntake}
+              </span>
+            </>
+          )}
           <span className="text-[10px]" style={{ color: accentColor }}>●</span>
           <span className="font-dm-sans font-semibold text-[13px]" style={{ color: primaryColor }}>
             {dept.accreditation}

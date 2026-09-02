@@ -6,10 +6,8 @@ const ChevronRight = () => (
   </svg>
 )
 
-const FEATURED_PROGRAM_HREFS = ['/departments/cse', '/departments/cse-aiml']
-
 export default function AcademicPrograms({ college }) {
-  const featured = college.academicPrograms.filter((p) => FEATURED_PROGRAM_HREFS.includes(p.href))
+  const featured = college.academicPrograms
 
   return (
     <section className="w-full bg-[#5B1027] section-pad">

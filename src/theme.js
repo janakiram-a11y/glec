@@ -38,13 +38,14 @@ const college = {
   ],
 
   newsItems: [
-    { text: 'Attention I B.E. 2025–2026 admitted students: regular classwork commences 28 Aug 2025, Block 1 GLEC. Time: 10:00 AM – 1:00 PM.' },
-    { text: 'Document submission procedure — ', linkText: 'Click Here', href: '/downloads/notices/tgeapcet-2026.pdf' },
-    { text: 'Job Openings — ', linkText: 'Click Here', href: '/contact' },
-    { text: 'GLEC is Co-Education from AY 2024–25. TG-EAPCET Counselling Code: GLWC.' },
-    { text: 'Faculty Recruitment Application Form — ', linkText: 'Click Here', href: '/downloads/notices/faculty-recruitment-application-form.pdf' },
-    { text: 'B.E. CSE — 360 Seats | B.E. CSE AI&ML — 120 Seats' },
-    { text: 'For academic verification: ', linkText: 'placements@glwec.in', href: 'mailto:placements@glwec.in' },
+    { text: 'Attention I B.E. 2025-2026 admitted students regular classwork commences from 28th August 2025 at Block 1, GLEC. Time: 10:00 AM to 1:00 PM.' },
+    { text: 'Procedure for Document submission @ college Reporting ', linkText: 'Click Here', href: '/downloads/notices/tgeapcet-2026.pdf' },
+    { text: 'Job Openings ', linkText: 'Click Here', href: '/downloads/examinations/paper-add.pdf' },
+    { text: 'GOKARAJU LAILAVATHI WOMENS ENGINEERING COLLEGE is converted to GOKARAJU LAILAVATHI ENGINEERING COLLEGE (Co Education) from the academic year 2024-2025. Both Boys and Girls can opt for this Institute in the counselling of TS-EAPCET-2025.' },
+    { text: 'Faculty Recruitment Application Form ', linkText: 'Click Here', href: '/downloads/notices/faculty-recruitment-application-form.pdf' },
+    { text: 'B.E. Computer Science and Engineering with Intake 360 seats' },
+    { text: 'B.E. CSE (AI & ML) with Intake 120 seats' },
+    { text: 'For Student Academic Verification, please mail us the details to ', linkText: 'placements@glwec.in', href: 'mailto:placements@glwec.in' },
   ],
 
   noticeItems: [
@@ -111,6 +112,9 @@ const college = {
       dropdown: [
         { label: 'B.E. (CSE)', href: '/departments/cse' },
         { label: 'B.E. (CSE AI & ML)', href: '/departments/cse-aiml' },
+        { label: 'B.E. (H&S)', href: '/departments/hs' },
+        { label: 'B.E. (IT)', href: '/departments/it' },
+        { label: 'B.E. (CS)', href: '/departments/computer-science' },
       ],
     },
     {
@@ -219,9 +223,10 @@ const college = {
 
   // ── About ─────────────────────────────────────────────────────────────────
   aboutHeading: 'Welcome to Gokaraju Lailavathi Engineering College',
-  aboutP1: 'Gokaraju Lailavathi Engineering College (GLEC) — previously Gokaraju Lailavathi Womens Engineering College (GLWEC) — was established in 2021 by Dr. G. Gangaraju as a self-financed institution under the Gokaraju Rangaraju Educational Society. Approved by AICTE, New Delhi, and affiliated with Osmania University, Hyderabad.',
-  aboutP2: 'As a sister concern of GRIET, GLEC adopts its world-class facilities and teaching-learning processes to ensure excellence in education. The college converted to co-education from the academic year 2024–25, now welcoming all students with a TG EAPCET counselling code of GLWC.',
-  aboutP3: 'With a management committee comprising experts from various industries and academia, GLEC is committed to fostering experiential learning, innovation, and holistic development — shaping graduates who are career-ready and globally competitive.',
+  aboutP1: 'Gokaraju Lailavathi Engineering College (GLEC) [previously Gokaraju Lailavathi Womens Engineering College (GLWEC)] was established in 2021 by Dr. G. Gangaraju as a self-financed institution under the Gokaraju Rangaraju Educational Society, dedicated to promoting quality education.',
+  aboutP2: 'Approved by AICTE, New Delhi, and affiliated with Osmania University, Hyderabad, GLEC is recognized for its innovative teaching practices. The college benefits from the guidance of an experienced management committee comprising experts from various industries and academia.',
+  aboutP3: 'As a sister concern of GRIET, GLEC adopts its facilities and teaching-learning processes to ensure excellence in education.',
+  aboutP4: 'Despite advancements in the education sector, challenges remain in fostering equal opportunities for all. Stereotypes often undermine capabilities in STEM fields, entrepreneurship, critical thinking, and problem-solving. At GLEC, we actively address these challenges by creating an inclusive learning environment. Beyond the university curriculum, we offer specialized programs designed to equip students with the skills needed to become globally competent professionals and future leaders.',
   aboutFeatures: [
     { title: 'AICTE Approved', sub: 'Nationally recognized programs' },
     { title: 'OU Affiliated', sub: 'Osmania University, Hyderabad' },
@@ -235,16 +240,10 @@ const college = {
 
   // ── Vision & Mission ──────────────────────────────────────────────────────
   // ── About Page Content ────────────────────────────────────────────────────────
-  aboutFounders: 'Dr. G. Gangaraju, Chairman of the Gokaraju Rangaraju Educational Society (GRES) and the Laila Group of Industries, is the inspiring force behind Gokaraju Lailavathi Engineering College. A visionary industrialist and philanthropist, Dr. Gangaraju established GRIET in 1997 and extended his commitment to technical education by founding GLEC in 2021. His mission has always been to create institutions that empower young minds with practical skills, ethical values, and the confidence to compete on a global stage.',
-
-  aboutSociety: "Gokaraju Lailavathi Engineering College is established by the Gokaraju Rangaraju Educational Society (GRES), a trust founded with a singular commitment to providing quality higher education in Engineering and Technology. GRES operates Gokaraju Rangaraju Institute of Engineering & Technology (GRIET), one of Hyderabad's most reputed autonomous engineering colleges, and extended its educational vision to GLEC in 2021. The Society is committed to fostering centres of academic excellence that produce globally competent engineers.",
 
   aboutDetailedParagraphs: [
-    "Gokaraju Lailavathi Engineering College (GLEC) — formerly Gokaraju Lailavathi Women's Engineering College (GLWEC) — was established in 2021 under the Gokaraju Rangaraju Educational Society by Dr. G. Gangaraju. Approved by AICTE, New Delhi, and affiliated with Osmania University, Hyderabad, GLEC is a self-financed institution committed to delivering world-class engineering education.",
-    'As a sister institution of GRIET, GLEC inherits a culture of academic rigour, research orientation, and industry engagement developed over 25+ years. The college converted to co-education from the academic year 2024–25 and now offers B.E. programmes in Computer Science & Engineering, CSE (AI & ML), Information Technology, Computer Science, and Humanities & Sciences.',
-    'The institution is led by a visionary management committee comprising industry experts, academic leaders, and research scholars. GLEC operates from a modern, fully equipped campus at Nizampet Road, Bachupally, Hyderabad, with state-of-the-art laboratories, a central library, sports facilities, and residential hostels.',
-    "GLEC's flagship skill development programmes — NIPUN (industry bridge), DHI (communication & leadership), and SEEKH (experiential learning) — ensure that graduates are not only technically proficient but also industry-ready communicators and problem solvers. The 2025 batch recorded 253 placement offers with a highest package of 6+ LPA from recruiters including Microsoft, Oracle, Wipro, Capgemini, Infosys, and Deloitte.",
-    'Driven by values of Excellence, Integrity, Innovation, and Service to the Nation, GLEC aspires to be a world-class engineering college that inspires young technocrats to become globally competent professionals and leaders committed to societal development.',
+    'Gokaraju Lailavathi Engineering College (GLEC) [previously Gokaraju Lailavathi Womens Engineering College (GLWEC)] was established in 2021 by Dr. G. Gangaraju as a self-financed institution under the Gokaraju Rangaraju Educational Society, dedicated to promoting quality education. Approved by AICTE, New Delhi, and affiliated with Osmania University, Hyderabad, GLEC is recognized for its innovative teaching practices.',
+    'The college benefits from the guidance of an experienced management committee comprising experts from various industries and academia. As a sister concern of GRIET, GLEC adopts its facilities and teaching-learning processes to ensure excellence in education.',
   ],
 
   vision: 'To be world class engineering college for imparting experiential, innovative and critical skills addressing societal problems. Inspiring young technocrats to become globally competent in technical education and research to emerge as world class leaders.',
@@ -257,15 +256,6 @@ const college = {
   ],
 
   qualityPolicy: 'To provide an integrated learning environment to enable students to grow towards their full potential and meet the high expectations of the Industry and the Society.',
-
-  strategies: [
-    'Develop and sustain a qualified, research-oriented, and industry-experienced faculty pool.',
-    'Forge strategic partnerships with leading industries for internships, projects, and placements.',
-    'Continuously update curricula to align with emerging technologies and national/global industry needs.',
-    'Foster a culture of innovation through research centres, student clubs, and entrepreneurship cells.',
-    'Implement outcome-based education (OBE) with regular feedback loops from alumni, industry, and academia.',
-    'Provide comprehensive student support — mentoring, counselling, health, sports, and career services.',
-  ],
 
   coreValues: [
     { name: 'Excellence', desc: 'Continually strive to achieve the highest standards in education and research.' },
@@ -280,14 +270,13 @@ const college = {
   // ── Academic Leadership Committee (Academics page) ───────────────────────
   academicLeadershipCommittee: {
     year: '2025–26',
-    description: 'The Academic Leadership Committee at GLEC exercises general supervision over all academic work of the institution, providing guidance on instruction methods, research standards, curriculum development, and student welfare in compliance with AICTE and Osmania University norms.',
+    description: 'The following members have been nominated as the Academic Leadership Members for the Academic Year 2025-26.',
     responsibilities: [
-      'General supervision over the academic work of the institute',
-      'Guidance on effective instruction methods and pedagogical best practices',
-      'Maintenance of research standards and outcome-based education',
-      'Recommendation of new academic programmes to the Governing Body',
-      'Advice on institutional scholarships, awards, and student welfare measures',
-      'Coordination between departments for academic calendar and examination planning',
+      'To exercise general supervision over the academic work of the institute, to give directions regarding method(s) of instruction, evaluation, research and improvements in academic standards.',
+      'To recommend to the Governing Body the proposals of the institution for new programs of study.',
+      'To recommend to the Governing Body, institution of scholarships, studentships, fellowships, prizes and medals, and to frame regulations for the award of the same.',
+      'To advise the Governing Body on suggestion(s) pertaining to academic affairs made by it.',
+      'To perform such other functions as may be assigned by the Governing Body.',
     ],
     members: [
       { sno: 1, name: 'Dr. A. Sai Hanuman',   designation: 'Principal',                        role: 'Chairman' },
@@ -302,7 +291,8 @@ const college = {
 
   // ── Library ───────────────────────────────────────────────────────────────
   library: {
-    description: 'The Central Library at GLEC is a cornerstone of academic enrichment, providing curated materials spanning books, magazines, encyclopaedias, and journals. The collection supports coursework, competitive exam preparation, and personal development across all B.E. programme disciplines.',
+    description: 'The GLEC Library stands as a cornerstone of academic enrichment, fostering a culture of curiosity and continuous learning. With its well-curated collection of books, magazines, encyclopedias, and journals, it equips students with a broad perspective on global events, scientific advancements, literary works, and scholarly discourses.',
+    description2: 'Beyond academic resources, the library also provides a diverse selection of co-curricular and extracurricular materials, catering to students preparing for competitive and external examinations. Designed to support both intellectual and personal development, the library serves as a dynamic space where students can engage in research, expand their knowledge, and cultivate critical thinking skills.',
     stats: [
       { label: 'Volumes',          value: '5,776', required: 'AICTE required: 5,000' },
       { label: 'Titles',           value: '1,357', required: 'AICTE required: 300' },
@@ -311,26 +301,6 @@ const college = {
       { label: 'Multimedia PCs',   value: '10',    required: 'AICTE required: 10' },
       { label: 'LMS System',       value: '1',     required: 'AICTE required: 1' },
     ],
-    facilities: [
-      { title: 'Print Collection',      desc: '5,776 volumes across 1,357 titles covering all B.E. programme disciplines including textbooks, reference books, encyclopaedias, and technical publications.' },
-      { title: 'Periodicals & Journals', desc: '48 national and international journals and periodicals subscribed, exceeding the AICTE-mandated requirement of 12 periodicals.' },
-      { title: 'Reading Room',          desc: 'Spacious reading hall with seating capacity for 150 students, with individual study carrels and group discussion corners for focused academic work.' },
-      { title: 'Multimedia Lab',        desc: '10 multimedia PCs with internet access for digital learning, NPTEL lectures, e-books, and online journal access.' },
-      { title: 'Library Management System', desc: 'Automated LMS for seamless book cataloguing, issue/return, and member management — ensuring efficient and transparent library operations.' },
-      { title: 'Digital Resources',     desc: 'Access to e-books, NPTEL video lectures, and digital databases supporting self-learning, research, and competitive exam preparation.' },
-    ],
-    rules: [
-      'Students must produce their library card to borrow books.',
-      'A maximum of two books may be issued at a time for a period of 14 days.',
-      'Books not returned on time attract a fine of ₹2 per day per book.',
-      'Reference books, journals, and periodicals are for in-library use only.',
-      'Students are responsible for any damage or loss of library books.',
-      'Silence must be maintained inside the library and reading room at all times.',
-      'Mobile phones must be switched off or kept on silent mode inside the library.',
-      'Bags and personal belongings must be deposited at the entry counter.',
-    ],
-    hours: 'Monday–Saturday: 9:00 AM – 5:00 PM',
-    contact: 'library@glwec.in',
   },
 
   // ── Leadership ────────────────────────────────────────────────────────────
@@ -341,7 +311,7 @@ const college = {
       institution: 'Chairman, GRIET',
       credentials: 'B.Pharma., Ph.D. | Chairman, Laila Group of Industries',
       image: '/images/leadership/Gokaraju_Ganga_Raju.jpg',
-      bio: 'Dr. Gokaraju Ganga Raju is the founder of the Gokaraju Rangaraju Educational Society (GRES), under which he established GRIET in 1997 and a pharmacy college in 2003. He is renowned for his dynamic, optimistic, and compassionate nature. As an outstanding team leader, he takes ownership of issues around him, takes control of situations, and promotes universal good.',
+      bio: 'Dr. G. Ganga Raju is renowned for his dynamic, optimistic, and compassionate nature. As an outstanding team leader, he takes ownership of issues around him, takes control of situations, and promotes universal good. Notably, leading by example he drives people to change. Dr. G. Ganga Raju initiated the promotion of Engineering and Pharmacy education under the Gokaraju Rangaraju Educational Society (GRES). In 1997, he established the Gokaraju Rangaraju Institute of Engineering and Technology, and in 2003, the Gokaraju Rangaraju College of Pharmacy. GRES is promoted by Dr. Gokaraju Ganga Raju, Chairman of Laila Group of Industries, having varied interests in Pharmaceuticals, Paper, Sugar, Agro-Products, etc. Dr. Gokaraju Ganga Raju, an educationalist and philanthropist, established GRIET as a fitting tribute to his dynamic and visionary father, Late Sri Gokaraju Ranga Raju.',
     },
     {
       name: 'Sri G.V.K. Ranga Raju',
@@ -349,7 +319,7 @@ const college = {
       institution: 'Vice President, GRIET',
       credentials: 'B.Tech. | Managing Director, Delta Paper Mills',
       image: '/images/leadership/Ranga_Raju.jpg',
-      bio: 'Sri G.V.K. Ranga Raju is the eldest son of Dr. G. Ganga Raju and oversees the day-to-day administrative and institutional matters of GRIET. As Managing Director of Delta Paper Mills, he brings strong industry and management acumen to the institution\'s operations. He is a firm advocate of technology-driven education, student empowerment, and building an environment that nurtures innovation and entrepreneurship among students.',
+      bio: '"Don\'t sit back and take what comes… go after what you want." Sri G.V.K. Ranga Raju is the eldest son of Dr. G. Ganga Raju. He brings to the Gokaraju Rangaraju Educational Society his business acumen, knowledge, and wide reading. His exceptional people skills have enabled him to create resounding goodwill and respect for himself and GRES. G.V.K. Ranga Raju takes care of all the day-to-day matters concerning GRIET, and promptly addresses the concerns of parents and students. He believes in a no-compromise policy when it comes to personal supervision of educational institutions and in maintaining academic schedule and discipline. Extraordinarily gifted and tech-savvy, he understands the importance of technology in today\'s fast-paced world. He believes in exposing students to cutting-edge technology so that they are equipped to not just face the challenges of modern-day living but become leaders in their own right. For him, education is a journey of discovery.',
     },
   ],
 
@@ -387,8 +357,8 @@ const college = {
     {
       count: 'B.E.',
       title: 'Information Technology',
-      seats: 60,
-      desc: 'Comprehensive IT program covering networks, databases, cloud computing, and enterprise systems. Intake: 60 seats.',
+      seats: 120,
+      desc: 'Comprehensive IT program covering networks, databases, cloud computing, and enterprise systems. Intake: 120 seats.',
       href: '/departments/it',
     },
     {
@@ -396,7 +366,7 @@ const college = {
       title: 'Computer Science',
       seats: 60,
       desc: 'Programme covering AI, cybersecurity, data science, cloud computing, software development, and next-generation computing. Intake: 60 seats.',
-      href: '/departments/cyber-security',
+      href: '/departments/computer-science',
     },
     {
       count: 'B.E.',
@@ -430,18 +400,21 @@ const college = {
       label: 'Industry Bridge Program',
       desc: 'Nurtures innovative thinking and bridges the academia-industry gap through project-based learning.',
       icon: '/images/icons/icon1nipun.png',
+      slug: 'nipun',
     },
     {
       count: 'DHI',
       label: 'Communication & Leadership',
       desc: 'Develops public speaking, essay writing, dramatics, debates, JAM sessions, and group discussions.',
       icon: '/images/icons/icon3dhi.png',
+      slug: 'dhi',
     },
     {
       count: 'SEEKH',
       label: 'Experiential Learning',
       desc: 'Delivers hands-on experiential learning for budding engineers through real-world application.',
       icon: '/images/icons/icon4seekh.png',
+      slug: 'seekh',
     },
     {
       count: '253+',
@@ -449,6 +422,38 @@ const college = {
       desc: 'Total placement offers for the 2025 batch across top companies in technology and engineering.',
     },
   ],
+
+  // ── Our Initiatives (NIPUN / DHI / SEEKH) ─────────────────────────────────
+  initiatives: {
+    nipun: {
+      title: 'NIPUN',
+      paragraphs: [
+        'NIPUN is designed to bridge the gap between industry and academia by offering a diverse range of skill enhancement courses, including Joy of Computing, Full Stack Development, IoT, Blockchain, AR/VR, MERN Stack, DevOps, HTML, CSS, Python, and other programming languages. These programs equip students with the ability to identify problems, apply appropriate solutions, and develop industry-ready skills.',
+        'In an era of increasing automation, an innovative mindset, problem-solving abilities, and critical thinking are crucial for engineers to enhance their employability. Beyond university degrees, employability skills, soft skills, and communication skills are key to thriving in a professional environment.',
+        'Through NIPUN, GLEC bridges the gap between acquired and required knowledge, academia and industry, employability and employment, and skill and subject by fostering continuous learning, unlearning, and relearning. This program runs every semester, allowing students to explore technologies of their interest and gain hands-on experience before making career choices.',
+      ],
+      batches: [
+        { year: 'I Year', title: 'Joy of Computing', desc: 'Joy of Computing focuses and instils the students\' mind to think logically and arrive at a solution programmatically. They learn and practice current advances in computing and the art of programming with Python as a language that enhances their skill set and knowledge. Students learn programming with anecdotes, analogies, and illustrious examples.' },
+        { year: 'II Year', title: 'Full Stack Development', desc: 'Full Stack Developers are developers that design complete apps and websites. These developers work on all facets of development, from frontend, to backend, to database, and even debugging and testing. In short, the developer must understand the app through and through. Frontend developers are more sought after because of their expertise in not one but multiple technologies. They can handle all aspects of development, and it can result in a more seamlessly created product.' },
+      ],
+    },
+    dhi: {
+      title: 'DHI',
+      paragraphs: [
+        'DHI! where creative minds congregate: the impossible becomes possible and the ordinary becomes extraordinary. Rooted in the Sanskrit word Vāc (वाच), meaning speech, Dhi embodies understanding, reflection, intellect, imagination, and innovation. It represents the thought-mind, intellect, and the activity of intellectual pursuit.',
+        'The DHI program at GLEC serves as a platform for students to evolve, develop, and demonstrate their knowledge while nurturing their ability to think beyond conventional boundaries. Providing an accessible and approachable space to showcase talent, DHI encourages students to push the limits of creativity and innovation.',
+        'In today\'s fast-paced and ever-evolving tech landscape, success requires more than just academic excellence — analytical thinking, interpersonal skills, and soft skills play a crucial role. DHI fosters divergent thinking — a method that explores multiple solutions to generate creative ideas — helping students stay ahead in a dynamic world.',
+      ],
+    },
+    seekh: {
+      title: 'SEEKH',
+      paragraphs: [
+        'Engineering is not just about adopting someone else\'s approach to solving a problem — it\'s about discovering and developing one\'s own. SEEKH is a unique program designed to impart experiential learning to budding engineers. GLEC has introduced this comprehensive initiative to bridge the gap between theory and practice, enabling students to gain hands-on experience and apply their knowledge effectively.',
+        'While academic grades provide qualifications, true employability comes from mastering core concepts. SEEKH empowers students by integrating academic learning with practical application, fostering problem-solving skills, innovation, and technical expertise.',
+        'This distinctive platform encourages young technocrats to think creatively, translating technical knowledge into real-world solutions. It nurtures both hard and soft skills, emphasizing creativity and application over rote learning. SEEKH seamlessly connects academia with industry, ensuring that students are well-prepared to excel in their professional journeys.',
+      ],
+    },
+  },
 
   // ── News & Events Photo Carousel ─────────────────────────────────────────
   newsCarouselLabel: 'From Campus',
@@ -581,8 +586,7 @@ const college = {
       accreditation: 'AICTE Approved',
       heroBgImage: '/imgi_5_aboutusbanner.jpg',
       about: [
-        'The Department of Computer Science & Engineering at Gokaraju Lailavathi Engineering College was established with the primary objective of imparting quality technical education and fostering research-oriented thinking. The department produces graduates who are technically proficient and equipped with problem-solving, communication, and leadership skills demanded by the global industry.',
-        "The department offers the B.E. programme in CSE with an intake of 360 students. Supported by GLEC's flagship skill development initiatives — NIPUN, SEEKH, and DHI — the department ensures strong academia-industry alignment. With experienced faculty, state-of-the-art laboratories, and active placement support, the CSE department has delivered 253+ placement offers for the 2025 batch.",
+        'The Department of Computer Science and Engineering at Gokaraju Lailavathi Engineering College has an intake of 360.',
       ],
       announcements: [
         'B.E. CSE 2025–26 admissions open — TG EAPCET code: GLWC',
@@ -670,14 +674,7 @@ const college = {
         { count: '4+', label: 'Years of Excellence', desc: 'Established since GLEC inception in 2021' },
         { count: '20+', label: 'Expert Faculty', desc: 'Industry & research experienced staff' },
       ],
-      news: [
-        { title: 'Hackathon 2025', desc: 'CSE students secured top positions at the inter-college hackathon organised at GRIET campus.', date: 'Feb 2025' },
-        { title: 'Cloud Computing Workshop', desc: 'Two-day hands-on workshop on AWS and Azure cloud platforms conducted by industry experts.', date: 'Jan 2025' },
-        { title: 'NIPUN Batch 4 Launch', desc: 'New batch of the NIPUN Industry Bridge Programme launched with 120 CSE students enrolled.', date: 'Dec 2024' },
-        { title: 'Guest Lecture: AI in Production', desc: 'Microsoft engineer delivered an expert session on deploying machine learning models at scale.', date: 'Nov 2024' },
-        { title: 'Orientation Programme 2024–25', desc: 'Welcome orientation for the 2024–25 B.E. CSE batch with industry mentors and faculty.', date: 'Aug 2024' },
-        { title: 'Cybersecurity Awareness Seminar', desc: 'Department organised a seminar on cybersecurity best practices for students and faculty.', date: 'Sep 2024' },
-      ],
+      news: [],
       alumni: [
         { name: 'Priya Sharma (2022)', role: 'Software Engineer', company: 'Microsoft' },
         { name: 'Rahul Verma (2022)', role: 'Data Analyst', company: 'Capgemini' },
@@ -707,12 +704,11 @@ const college = {
       shortName: 'CSE AI&ML',
       degree: 'B.E.',
       ugIntake: 120,
-      established: 2022,
+      established: 2024,
       accreditation: 'AICTE Approved',
       heroBgImage: '/imgi_5_aboutusbanner.jpg',
       about: [
-        'The Department of CSE (Artificial Intelligence & Machine Learning) at Gokaraju Lailavathi Engineering College was established in 2022 to meet the growing industry demand for AI-skilled professionals. Offering a B.E. programme with an intake of 120 students, the department is dedicated to producing graduates who can design, develop, and deploy intelligent systems that solve real-world problems.',
-        "The curriculum integrates core computer science foundations with specialised modules in machine learning, deep learning, natural language processing, computer vision, and data science. Backed by GLEC's NIPUN, SEEKH, and DHI initiatives, students gain hands-on project experience, strong communication skills, and industry exposure — making them placement-ready from day one.",
+        'GLEC consistently leads in introducing the latest and trending programs, and in the academic year 2024, it launched the Artificial Intelligence and Machine Learning (AI & ML) program with an intake of 120 students.',
       ],
       announcements: [
         'B.E. CSE (AI & ML) 2025–26 admissions open — TG EAPCET code: GLWC',
@@ -755,17 +751,10 @@ const college = {
       achievements: [
         { count: '120', label: 'UG Intake', desc: 'B.E. CSE (Artificial Intelligence & Machine Learning)' },
         { count: '50+', label: 'Placements 2025', desc: 'Offers in AI, ML & Data Science roles' },
-        { count: '3+', label: 'Years of Excellence', desc: 'Established since 2022 at GLEC' },
+        { count: '1+', label: 'Years of Excellence', desc: 'Launched in academic year 2024 at GLEC' },
         { count: '12+', label: 'Expert Faculty', desc: 'Specialists in AI, ML, NLP & Computer Vision' },
       ],
-      news: [
-        { title: 'AI Hackathon 2025', desc: 'CSE AI&ML students won second place at the inter-college AI hackathon, presenting a real-time object detection model.', date: 'Feb 2025' },
-        { title: 'Deep Learning Workshop', desc: 'Two-day intensive workshop on CNNs and Transformers conducted in collaboration with an industry AI research team.', date: 'Jan 2025' },
-        { title: 'Guest Lecture: Generative AI', desc: 'Senior ML Engineer from a leading tech firm delivered a session on LLMs and their enterprise deployment strategies.', date: 'Feb 2025' },
-        { title: 'SEEKH Batch 3 Launch', desc: 'Third batch of the SEEKH experiential learning programme launched with 60 CSE AI&ML students building end-to-end ML pipelines.', date: 'Dec 2024' },
-        { title: 'Research Paper Publication', desc: 'Faculty and final-year students co-authored a paper on "Federated Learning for Healthcare" accepted at a national conference.', date: 'Nov 2024' },
-        { title: 'Orientation 2024–25', desc: 'Welcome orientation for the new B.E. CSE AI&ML batch featuring alumni talks, lab tours, and faculty introductions.', date: 'Aug 2024' },
-      ],
+      news: [],
       alumni: [
         { name: 'Ananya Reddy (2023)', role: 'ML Engineer', company: 'Oracle' },
         { name: 'Rohan Mehta (2023)', role: 'Data Scientist', company: 'Deloitte' },
@@ -790,8 +779,10 @@ const college = {
       accreditation: 'AICTE Approved',
       heroBgImage: '/imgi_5_aboutusbanner.jpg',
       about: [
-        'The Department of Humanities & Sciences at Gokaraju Lailavathi Engineering College serves as the foundational pillar of engineering education at GLEC. Established in 2021, the department offers core instruction in Mathematics, Physics, Chemistry, English Communication, and Management Sciences to all first-year engineering students across all branches.',
-        "The department plays a crucial role in strengthening analytical thinking, scientific reasoning, and communication skills that are fundamental to every engineering discipline. Through well-equipped physics and chemistry laboratories, language labs, and a team of experienced faculty, the H&S department ensures that GLEC students build a strong academic foundation for their specialised engineering programmes. The department also supports GLEC's DHI initiative — focusing on communication, leadership, and professional development.",
+        'The Department of Humanities and Sciences provides a strong foundation for core engineering courses, integrating a diverse range of subjects such as Engineering Graphics, English, Mathematics, Physics, Chemistry, Environmental Studies, and Programming for Problem Solving. It serves as a crucial stepping stone for students, preparing them to transition into their specialized engineering disciplines. The department is committed to fostering fundamental knowledge through a structured academic approach.',
+        'The department, led by a team of highly qualified and experienced faculty, provides comprehensive academic support. Committed to strengthening students\' conceptual understanding and analytical skills, faculty members remain accessible for guidance, counselling, and clarifications as needed. The department also facilitates practical learning through well-equipped laboratories, including Scientific Programming Lab, English Lab, Engineering Physics Lab and Chemistry Labs, Engineering Workshop, and Basic Electrical Engineering Lab.',
+        'The first-year administration is overseen by Dr. J. Kishore Babu, the Head of the Department. He is supported by various committees responsible for structuring academic timetables, maintaining discipline, and managing departmental resources. Additionally, the administration ensures the selection and organization of student groups for class management and extracurricular activities, encouraging active participation in institutional and external competitions.',
+        'A distinctive feature of the first-year administration is the Advanced Academic Center (AAC), which identifies and nurtures students with exceptional talents and innovative thinking. Through targeted initiatives, the department aims to provide a holistic learning environment that fosters academic excellence and professional development, equipping students with the skills necessary for success in their engineering careers.',
       ],
       announcements: [
         'First-year student orientation and timetable — August 2025',
@@ -809,7 +800,8 @@ const college = {
         title: 'Head of the Department, H&S',
         image: '/images/faculty/hod/dr-j-kishore-babu.jpeg',
         bio: [
-          'Dr. J. Kishore Babu is the Head of the H&S Department at Gokaraju Lailavathi Engineering College (GLEC), Hyderabad. He earned his Ph.D. in Physics from Acharya Nagarjuna University and has an extensive teaching career spanning 20 years. He joined Gokaraju Rangaraju Institute of Engineering and Technology (GRIET) in 2012. He holds memberships in professional bodies including the LSI and ISTE.',
+          'Dr. J. Kishore Babu is the Head of the H&S Department at Gokaraju Lailavathi Engineering College (GLEC), Hyderabad. He earned his Ph.D. in Physics from Acharya Nagarjuna University and has an extensive teaching career spanning 20 years. He joined Gokaraju Rangaraju Institute of Engineering and Technology (GRIET) in 2012, where he played a crucial role in academics and research before taking on his leadership position at GLEC. He holds memberships in professional bodies such as the LSI & ISTE.',
+          'With a deep commitment to education and scientific research, Dr. Kishore Babu has been instrumental in mentoring students and enhancing the quality of foundational sciences in engineering education. Throughout his career, Dr. Babu has published several journal articles and conference proceedings, reflecting his dedication to advancing scientific knowledge. His expertise and experience continue to contribute significantly to the academic excellence of the institution.',
         ],
       },
       facultyPdf: '/downloads/faculty-lists/cse-h-s-faculty.pdf',
@@ -845,14 +837,7 @@ const college = {
         { count: '15+', label: 'Expert Faculty', desc: 'PhD holders & experienced science educators' },
         { count: '1000+', label: 'Students Trained', desc: 'First-year students across all B.E. programmes' },
       ],
-      news: [
-        { title: 'National Science Day Celebrations', desc: 'Department organised science demonstrations and quiz competitions celebrating National Science Day with participation from all first-year students.', date: 'Feb 2025' },
-        { title: 'English Communication Workshop', desc: 'Intensive two-day workshop on technical writing, presentation skills, and group discussion techniques conducted for B.E. first-year students.', date: 'Jan 2025' },
-        { title: 'DHI Batch 5 Launch', desc: 'Fifth batch of the DHI communication and leadership programme launched, covering public speaking, essay writing, and JAM sessions.', date: 'Dec 2024' },
-        { title: 'Mathematics Remedial Programme', desc: 'Special remedial sessions in Engineering Mathematics for students needing additional support, conducted by senior faculty.', date: 'Nov 2024' },
-        { title: 'Chemistry Lab Practical Exhibition', desc: 'Annual chemistry lab exhibition where first-year students showcased experimental results and findings to faculty and senior students.', date: 'Oct 2024' },
-        { title: 'Orientation 2024–25', desc: 'Departmental orientation for all new B.E. students covering academic structure, lab rules, and the role of H&S in engineering education.', date: 'Aug 2024' },
-      ],
+      news: [],
       alumni: [
         { name: 'Pooja Verma (2022)', role: 'Software Engineer', company: 'TCS' },
         { name: 'Srinivas Reddy (2022)', role: 'Systems Analyst', company: 'Infosys' },
@@ -933,14 +918,7 @@ const college = {
         { count: '4+', label: 'Years of Excellence', desc: 'Established since GLEC inception in 2021' },
         { count: '15+', label: 'Expert Faculty', desc: 'Industry & research experienced IT educators' },
       ],
-      news: [
-        { title: 'Cloud Computing Workshop', desc: 'Hands-on workshop on AWS and Microsoft Azure fundamentals attended by IT students, culminating in a certification preparation session.', date: 'Feb 2025' },
-        { title: 'Network Security Seminar', desc: 'Cybersecurity expert delivered a session on ethical hacking, penetration testing, and network vulnerability assessment tools.', date: 'Jan 2025' },
-        { title: 'NIPUN IT Batch 4 Launch', desc: 'Fourth batch of NIPUN launched for IT students focusing on full-stack web development, API design, and cloud deployment pipelines.', date: 'Dec 2024' },
-        { title: 'Database Design Competition', desc: 'Intra-department competition on relational and NoSQL database design where teams built and presented end-to-end data management solutions.', date: 'Nov 2024' },
-        { title: 'Industry Visit: IT Park Hyderabad', desc: 'IT students visited leading IT companies at the Hyderabad IT corridor, gaining insight into enterprise software development environments.', date: 'Oct 2024' },
-        { title: 'Orientation 2024–25', desc: 'Welcome orientation for the new B.E. IT batch with faculty introductions, lab tours, and industry alumni interactions.', date: 'Aug 2024' },
-      ],
+      news: [],
       alumni: [
         { name: 'Harsha Vardhan (2022)', role: 'Software Developer', company: 'TCS' },
         { name: 'Swathi Reddy (2022)', role: 'Network Engineer', company: 'Infosys' },
@@ -956,7 +934,7 @@ const college = {
       ],
     },
     {
-      slug: 'cyber-security',
+      slug: 'computer-science',
       name: 'Computer Science',
       shortName: 'CS',
       degree: 'B.E.',
@@ -965,8 +943,7 @@ const college = {
       accreditation: 'AICTE Approved',
       heroBgImage: '/imgi_5_aboutusbanner.jpg',
       about: [
-        'The Department of Computer Science at Gokaraju Lailavathi Engineering College was established in 2023 with an intake of 60, focused on producing graduates skilled in the latest computing disciplines.',
-        "The curriculum empowers students with expertise in artificial intelligence, cybersecurity, data science, cloud computing, software development, and blockchain. Backed by GLEC's NIPUN and SEEKH programmes, students develop strong technical and professional competencies essential for careers in the evolving global IT landscape.",
+        'The Department of Computer Science at GLEC established in 2023, with intake of 60.',
       ],
       announcements: [
         'B.E. Computer Science 2025–26 admissions open — TG EAPCET code: GLWC',
@@ -1007,17 +984,10 @@ const college = {
       achievements: [
         { count: '60+', label: 'Students Trained', desc: 'B.E. Computer Science programme' },
         { count: '2023', label: 'Established', desc: 'Dedicated to cutting-edge computing disciplines' },
-        { count: '4+', label: 'Years of Excellence', desc: 'Under the Gokaraju Group legacy' },
+        { count: '2+', label: 'Years of Excellence', desc: 'Under the Gokaraju Group legacy' },
         { count: '10+', label: 'Expert Faculty', desc: 'Specialists in AI, data science & cloud computing' },
       ],
-      news: [
-        { title: 'CTF Competition 2025', desc: 'Computer Science students participated in a national Capture The Flag competition, securing top-10 positions against 200+ teams.', date: 'Feb 2025' },
-        { title: 'Penetration Testing Workshop', desc: 'Industry-led two-day workshop on ethical hacking and penetration testing using Kali Linux, Metasploit, and Burp Suite.', date: 'Jan 2025' },
-        { title: 'Guest Lecture: Zero Trust Security', desc: 'Senior security architect delivered a session on Zero Trust Architecture and its enterprise implementation.', date: 'Feb 2025' },
-        { title: 'SEEKH Batch 3 Launch', desc: 'Third SEEKH batch for CS students kicked off with projects on vulnerability assessment, SIEM tools, and cloud security monitoring.', date: 'Dec 2024' },
-        { title: 'Cyber Awareness Week', desc: 'Department organised a week-long awareness programme with quizzes, demos, and workshops open to all GLEC students.', date: 'Oct 2024' },
-        { title: 'Orientation 2024–25', desc: 'Welcome orientation for new B.E. Computer Science students covering lab protocols, programme structure, and career pathways.', date: 'Aug 2024' },
-      ],
+      news: [],
       alumni: [
         { name: 'Arjun Mehta (2022)', role: 'Security Analyst', company: 'Wipro' },
         { name: 'Divya Krishnan (2022)', role: 'Network Security Engineer', company: 'TCS' },
@@ -1036,9 +1006,11 @@ const college = {
 
   // ── Placements ────────────────────────────────────────────────────────────
   placementsDescription: [
-    'Gokaraju Lailavathi Engineering College (GLEC), formerly Gokaraju Lailavathi Women\'s Engineering College, offers a comprehensive Training and Placement programme to equip students with the skills required to excel in their professional careers. The Training & Placement Cell coordinates with top recruiters across technology, core engineering, and business domains to provide the best opportunities for our students.',
-    'In GLEC the placements training will start from first year onwards. Students are trained to accomplish Python NPTEL Certification in the First year. The Placement Cell provides end-to-end support from skill development and interview preparation to final placement confirmation.',
-    'GLEC\'s flagship programmes — NIPUN (Industry Bridge), SEEKH (Experiential Learning), and DHI (Communication & Leadership) — ensure that every student is industry-ready from day one. The 2025 batch recorded 253 placement offers with a highest package of 6+ LPA.',
+    'Gokaraju Lailavathi Engineering College (GLEC) places a strong emphasis on experiential learning within its training process. To enhance learning opportunities for students, the college has adopted innovative pedagogical practices in collaboration with industry partners, businesses, counterpart institutions, and international experiences.',
+    'In addition to practical skills within the chosen discipline, overall personality development is a critical aspect of every course of study. To this end, the college has invested significantly in establishing auxiliary facilities.',
+    'The Training & Placement Cell at GLEC provides comprehensive personal and career-oriented support to students. The primary aim is to help students excel academically during their time at the college and to prepare them for successful careers post-graduation. Beyond the training offered during the regular course curriculum, GLEC provides an extensive training programme during the vacation period following the pre-final year exams. This programme is designed to prepare students for the recruitment process in their final year and is conducted by specialized trainers. The effectiveness of this training is reflected in the college\'s consistent and remarkable placement record.',
+    'Many students from GRES gain admission to prestigious institutions in India and abroad for higher studies. The college is a leading institution for campus recruitments in the state, attracting numerous major companies from both the IT and Core sectors for talent acquisition.',
+    'In GLEC the placements training will start from first year onwards. Students are trained to accomplish Python NPTEL Certification in the First year.',
   ],
   placementsContacts: [
     { role: 'Dean, Training & Placements', name: 'Dr. K. Butchi Raju', phone: '7702964747', email: 'placements@glwec.in' },
@@ -1069,12 +1041,12 @@ const college = {
       { role: 'Committee Member', name: 'Yalamanchili Rama' },
     ],
     objectives: [
-      'Be established and administered under the provisions of the Constitution of India',
-      'Work toward removing illiteracy among the people',
-      'Establish technical education schools in Andhra Pradesh',
-      'Train individuals with industrial backgrounds for technical roles',
-      'Develop training institutions to advance educational endeavors',
-      'Promote scientific and technical needs of rural masses',
+      'The society is established and shall be administered under the provisions of the Constitution of India.',
+      'The society shall work to the cause of removing illiteracy among the people.',
+      'The society shall make efforts to start technical education schools in Andhra Pradesh.',
+      'The society shall strive to train technical persons with industrial background.',
+      'The society shall also establish training schools and colleges to strengthen and promote educational activities.',
+      'It shall work out a plan to remove gaps in the educational setup in order to promote scientific and technical needs of rural masses.',
     ],
   },
 
@@ -1082,16 +1054,16 @@ const college = {
   governingBody: {
     year: '2024–25',
     members: [
-      { no: 1, name: 'Dr. G. Ganga Raju', role: 'President', category: 'Society Nominee', email: 'mail@lailanutra.com', image: '/images/governing-body/dr-g-ganga-raju.jpg' },
-      { no: 2, name: 'Sri G. V. K. Ranga Raju', role: 'Vice President', category: 'Society Nominee', email: 'gvk555@gmail.com', image: '/images/governing-body/sri-g-v-k-ranga-raju.jpg' },
-      { no: 3, name: 'Sri G. Rama Raju', role: 'Secretary', category: 'Society Nominee', email: 'asrams@yahoo.com', image: '/images/governing-body/sri-g-rama-raju.jpg' },
-      { no: 4, name: 'Smt. Vani Ranga Raju', role: 'Member', category: 'Society Nominee', email: 'gvaniraju@gmail.com', image: '/images/governing-body/smt-vani-ranga-raju.jpg' },
-      { no: 5, name: 'Prof. G. Mallesham', role: 'University Nominee', category: 'University Nominee', email: 'gm.eed.cs@gmail.com', image: '/images/governing-body/prof-g-mallesham.jpg' },
-      { no: 6, name: 'Dr. D. N. Reddy', role: 'Member', category: 'Member', email: 'reddydn@gmail.com', image: '/images/governing-body/dr-d-n-reddy.jpg' },
-      { no: 7, name: 'Dr. Syeda Sameen Fathima', role: 'Member', category: 'Member', email: 'sameenf@gmail.com', image: '/images/governing-body/dr-syeda-sameen-fathima.jpg' },
-      { no: 8, name: 'Prof. J.N. Murthy', role: 'Member', category: 'Member', email: 'nm.jandhyala@gmail.com', image: '/images/governing-body/prof-j-n-murthy.jpg' },
-      { no: 9, name: 'Dr. K.V.S. Raju, Ph.D.', role: 'Member (Registrar)', category: 'Senior Faculty', email: 'ao@griet.ac.in', image: '/images/governing-body/dr-k-v-s-raju-ph-d.jpg' },
-      { no: 10, name: 'Dr. A. Sai Hanuman, Ph.D.', role: 'Member Secretary & Principal', category: 'Member Secretary', email: 'admnglwec@gmail.com', image: '/images/governing-body/dr-a-sai-hanuman-ph-d.jpeg' },
+      { no: 1, name: 'Dr. G. Ganga Raju', affiliation: 'Chairman, Laila Group of Industries, Vijayawada, AP', role: 'President', category: 'Chairman, Society Nominee', email: 'mail@lailanutra.com', image: '/images/governing-body/dr-g-ganga-raju.jpg' },
+      { no: 2, name: 'Sri G. V. K. Ranga Raju', affiliation: 'M.D., Delta Paper Mills, Andhra Pradesh', role: 'Vice President', category: 'Society Nominee', email: 'gvk555@gmail.com', image: '/images/governing-body/sri-g-v-k-ranga-raju.jpg' },
+      { no: 3, name: 'Sri G. Rama Raju', affiliation: 'M.D., Laila Impex, Vijayawada, Andhra Pradesh', role: 'Secretary', category: 'Society Nominee', email: 'asrams@yahoo.com', image: '/images/governing-body/sri-g-rama-raju.jpg' },
+      { no: 4, name: 'Smt. Vani Ranga Raju', affiliation: 'M.D., Ganges Valley School, Hyderabad', role: 'Member', category: 'Society Nominee', email: 'gvaniraju@gmail.com', image: '/images/governing-body/smt-vani-ranga-raju.jpg' },
+      { no: 5, name: 'Prof. G. Mallesham', affiliation: 'Department of Electrical Engineering, UCE, OU, Hyderabad', role: 'University Nominee', category: 'University Nominee', email: 'gm.eed.cs@gmail.com', image: '/images/governing-body/prof-g-mallesham.jpg' },
+      { no: 6, name: 'Dr. D. N. Reddy', affiliation: 'Chairman, Recruitment Board, DRDO', role: 'Member', category: 'Member', email: 'reddydn@gmail.com', image: '/images/governing-body/dr-d-n-reddy.jpg' },
+      { no: 7, name: 'Dr. Syeda Sameen Fathima', affiliation: 'Professor, Anurag University, Hyderabad', role: 'Member', category: 'Member', email: 'sameenf@gmail.com', image: '/images/governing-body/dr-syeda-sameen-fathima.jpg' },
+      { no: 8, name: 'Prof. J.N. Murthy', affiliation: 'Director, GRIET, Hyderabad', role: 'Member', category: 'Member', email: 'nm.jandhyala@gmail.com', image: '/images/governing-body/prof-j-n-murthy.jpg' },
+      { no: 9, name: 'Dr. K.V.S. Raju, Ph.D.', affiliation: 'Registrar, GLEC, Hyderabad', role: 'Member (Registrar)', category: 'Member, Senior Faculty', email: 'ao@griet.ac.in', image: '/images/governing-body/dr-k-v-s-raju-ph-d.jpg' },
+      { no: 10, name: 'Dr. A. Sai Hanuman, Ph.D.', affiliation: 'Professor & Principal, Gokaraju Lailavathi Engineering College', role: 'Member Secretary & Principal', category: 'Member Secretary & Principal', email: 'admnglwec@gmail.com', image: '/images/governing-body/dr-a-sai-hanuman-ph-d.jpeg' },
     ],
   },
 
@@ -1109,8 +1081,8 @@ const college = {
     ],
     bio: [
       'Prof. Kalidindi Venkata Satyanarayana Raju (Prof. K.V.S. Raju) is a multi-specialty and multi-faceted personality with a distinguished career spanning banking and academia. Born September 24, 1956, he began his professional journey with Bank of Baroda, gaining extensive experience across various locations and departments including IT, and is a Certified Associate of the Indian Institute of Bankers (CAIIB).',
-      'He took voluntary retirement from banking in 2001, and subsequently joined Gokaraju Rangaraju Institute of Engineering and Technology (GRIET), Hyderabad as Administrative Officer in 2005 — a position he continues to hold alongside his role as Registrar of GLEC. He teaches B.Tech. and MBA students and has published articles in national and international journals.',
-      'His Ph.D. research, completed at JNTU Hyderabad in 2014, focuses on leadership development in public sector banks. He has attended and organised several national and international seminars, workshops, and conferences, contributing significantly to academic administration and management research.',
+      'He took voluntary retirement from Bank of Baroda in 2001 and joined Godavari Institute of Engineering and Technology, Rajahmundry, where his vast practical experience and academic excellence helped him settle down as a good teacher too. In 2005, on invitation, he joined Gokaraju Rangaraju Institute of Engineering and Technology (GRIET), Hyderabad as an Administrative Officer cum Professor — a position he continues to hold alongside his role as Registrar of GLEC. He teaches B.Tech. and MBA students and has published a few articles in journals of national and international repute.',
+      'He has attended several seminars, workshops, and conferences, and organised a few. He was awarded a Ph.D. in Management by Jawaharlal Nehru Technological University Hyderabad in 2014, for his research work on "Leadership Development in Public Sector Banks."',
     ],
   },
 
@@ -1143,9 +1115,9 @@ const college = {
       'An Efficient Mechanism using Smart Belt to Prevent School Children Abduction (2020)',
     ],
     bio: [
-      'Dr. Akundi Sai Hanuman is a distinguished academician and researcher serving as Principal of Gokaraju Lailavathi Engineering College. With over 24 years of experience spanning academics, industry, and research, he has consistently been at the forefront of technological education and innovation.',
-      'He holds a Ph.D. from Acharya Nagarjuna University, Guntur (2012) and has published 35+ research papers in reputed national and international journals. His research spans data clustering, machine learning, optimization techniques, and distributed systems — areas central to modern computing and artificial intelligence. He has completed 2 research projects with total funding of approximately ₹8.6 lakh.',
-      'As Principal, Dr. Sai Hanuman has led the transformation of GLEC into a modern co-education engineering institution with a strong focus on outcome-based education, industry partnerships, and student placement outcomes. He is a registered PhD Guide at JNTU Hyderabad, currently mentoring two PhD scholars.',
+      'Dr. Akundi Sai Hanuman, Professor of Computer Science and Engineering, completed his Ph.D. from Acharya Nagarjuna University, Guntur in 2012. He has over 24 years of experience in Academics, Industry and Research. Dr. Akundi Sai Hanuman\'s research interests include Data Clustering, Data Sciences, Machine Learning, Optimization Techniques and Distributed Systems, for most of the courses he developed ICT methods for effective teaching learning.',
+      'Dr. Sai Hanuman has worked as Dean Academics, Dean of Examinations, Head of the Department, Chairman BOS and Convener for various National and International events. He is a member of IEEE and CSI. He has published more than 35 papers in National and International journals and two patents on "A Generic Framework for Multi Model Document Image Analysis" and "An Efficient Mechanism using Smart Belt to Prevent School Children Abduction" in the year of 2020. He has completed 2 research projects with a total amount of around 8.6 lakhs.',
+      'He is a Registered PhD Guide at the Department of Computer Science and Engineering, J.N.T. University, Hyderabad. He is presently guiding two PhD scholars.',
     ],
   },
 
@@ -1166,7 +1138,7 @@ const college = {
 
   // ── Anti Ragging ──────────────────────────────────────────────────────────
   antiRagging: {
-    description: 'GLEC is committed to maintaining a ragging-free campus in compliance with the Supreme Court directives and AICTE guidelines. The Anti-Ragging Committee oversees all preventive measures to ensure a safe, inclusive environment for every student.',
+    description: 'GLEC has formulated the Anti-Ragging policy and taken measures to constitute an effective Anti-Ragging System in line with the directives of the Honorable Supreme Court, AICTE, UGC, and the Telangana State Council for Higher Education. An Anti-Ragging Committee comprising the Principal, Incharge Discipline, Inspector of Police (Bachupally Circle), Heads of the Departments, Incharge Student Affairs, and senior student representatives meets every incoming batch of first-year students before arrival to explain the menace of ragging, the directives of the Supreme Court and AICTE, and the punishment for being found guilty of ragging. It is also made clear to all student members that the burden of proof lies with the accused and not with the victim.',
     image: '/images/anti-ragging/anti-ragging.jpg',
     members: [
       { name: 'Dr. A. Sai Hanuman', designation: 'Principal', phone: '9849078370' },
@@ -1199,8 +1171,9 @@ const college = {
       'Anti-ragging squad patrolling the campus during the first three months of every academic year',
       'Emergency contact numbers displayed prominently across campus',
       'AICTE anti-ragging prohibition information included in the admission prospectus',
-      'Mandatory anti-ragging affidavits from both students and parents',
-      'Orientation sessions with counseling for first-year students',
+      'Mandatory anti-ragging affidavits from both students and parents, as prescribed by AICTE and UGC',
+      'An Anti-Ragging oath administered to second-year students',
+      'Orientation sessions with counseling for first-year students and their parents on the first day of the academic session',
       'Staggered class schedules separating seniors and freshers',
     ],
   },
@@ -1216,19 +1189,29 @@ const college = {
       { sno: 5, name: 'Dr. J. Kishore Babu', designation: 'Asst. Prof., HOD (H&S)', phone: '9866444077' },
     ],
     functions: [
-      'Implement Supreme Court and UGC directives on policies against sexual harassment',
-      'Establish mechanisms for addressing gender-based violence cases',
-      'Ensure full and effective policy implementation through complaint procedures',
-      'Foster environments free from gender discrimination',
-      'Guarantee equal access to all facilities and participation in college activities',
-      'Create safe environments discouraging harassment',
-      'Promote awareness regarding harassment through supportive settings',
+      'Implement the Supreme Court and UGC directives on policies against sexual harassment within the institution.',
+      'Develop a mechanism to prevent and address cases of sexual harassment and other gender-based violence.',
+      'Ensure the policy is implemented fully and effectively through proper complaint reporting and follow-up procedures.',
+      'Create an environment free from gender-based discrimination.',
+      'Guarantee equal access to all facilities and participation in college activities for everyone.',
+      'Establish a safe physical and social environment that discourages acts of sexual harassment.',
+      'Promote awareness about sexual harassment in its various forms through a supportive social and psychological environment.',
     ],
   },
 
   // ── Grievance Redressal ───────────────────────────────────────────────────
   grievance: {
-    description: 'The Grievance Redressal Committee at GLEC aims to develop a responsive and accountable attitude among all stakeholders, maintaining a harmonious educational environment by addressing student complaints effectively and impartially.',
+    description: 'The College has a Students\' Grievance Redressal Committee. The functions of the Committee are to look into the complaints lodged by any student, and judge its merit. The Grievance Redressal Committee is also empowered to look into matters of harassment. Anyone with a genuine grievance may approach the Grievance Redressal Committee members in person. In case the person is unwilling to appear in self, grievances may be sent in writing. Grievances may also be sent through e-mail to the Grievance Redressal Committee or Principal. The objective of the Grievance Redressal Committee is to develop a responsive and accountable attitude among all the stakeholders to maintain a harmonious educational atmosphere in the institute.',
+    objectives: [
+      'Upholding the dignity of the College by ensuring a strife-free atmosphere through promoting cordial Student-Student and Student-Teacher relationships.',
+      'Encouraging students to express their grievances/problems freely and frankly, without any fear of being victimized.',
+      'Providing a Suggestion/Complaint Register in front of the Administrative Block, where students who wish to remain anonymous can put in writing their grievances and suggestions for improving the Academics/Administration of the College.',
+      'Advising students of the College to respect the rights and dignity of one another and show utmost restraint and patience whenever any occasion of rift arises.',
+      'Advising all students to refrain from inciting students against other students, teachers, and the College administration.',
+      'Advising all staff to be affectionate to students and not behave in a vindictive manner towards any of them for any reason.',
+      'Ragging in any form is strictly prohibited in and outside the institution; any violation of ragging and disciplinary rules should be urgently brought to the notice of the Principal.',
+    ],
+    establishmentNote: 'In order to comply with the AICTE Regulation for addressing student or parent grievances in a Technical Institution, the Grievance Redressal Committee has been constituted with staff in different positions to enquire into the nature and extent of a grievance. The committee can suggest the final action to be initiated at the institutional level for its redressal.',
     members: [
       { name: 'Dr. A. Sai Hanuman', designation: 'Principal', role: 'Chairman' },
       { name: 'Dr. Padmalaya Nayak', designation: 'Prof. & HOD (CSE)', role: 'Member' },
@@ -1256,7 +1239,7 @@ const college = {
   segd: {
     fullName: 'Socio-Economically Disadvantaged Groups Cell',
     shortName: 'SEGD Cell',
-    description: 'The SEGD Cell at GLEC is dedicated to ensuring inclusive participation, equal opportunities, and holistic support for students from SC/ST and other socio-economically disadvantaged backgrounds.',
+    description: 'The Socio-Economically Disadvantaged Groups Cell (SEGD) has been constituted with the following faculty members to redress the grievance of SC/ST students and faculty.',
     members: [
       { name: 'Dr. Padmalaya Nayak', designation: 'Prof. & HOD CSE', role: 'Chairman' },
       { name: 'Dr. J. Kishore Babu', designation: 'Professor & H&S HOD', role: 'Coordinator' },
@@ -1267,18 +1250,18 @@ const college = {
       { name: 'K. Srinivasa Rao', designation: 'Assistant Professor', role: 'Member' },
     ],
     objectives: [
-      'Handle academic and non-academic issues and complaints received from SC/ST students',
-      'Ensure discrimination-free participation in academic and placement activities',
-      'Distribute information on scholarships and educational opportunities from government agencies',
-      'Implement constitutional protections for SC/ST students',
-      'Organise skill development programs for career advancement of disadvantaged students',
+      'To address the academic and non-academic issues and complaints received from the SC/ST students.',
+      'To ensure an environment where all communities can participate in academic and placement activities without any discrimination.',
+      'To circulate the information about the special educational opportunities and various scholarships provided by the State or Central government for the SC/ST students.',
+      'To ensure to implement constitutional rights extended to the SC/ST students in the college.',
+      'To propose and organize skill-oriented programs to enrich their career growth.',
     ],
   },
 
   // ── Finance Committee ─────────────────────────────────────────────────────
   financeCommittee: {
     year: '2024–25',
-    description: 'The Finance Committee oversees the financial management and budgetary matters of the college, ensuring transparent and accountable administration of institutional funds in compliance with regulatory requirements.',
+    description: 'The following members have been nominated as the Finance Committee Members for the Academic Year 2024-25.',
     members: [
       { name: 'Dr. A. Sai Hanuman', designation: 'Principal', role: 'Chairman' },
       { name: 'Dr. Jandhyala N. Murthy', designation: 'Director', role: 'Nominated by Governing Body' },
@@ -1292,7 +1275,7 @@ const college = {
 
   // ── Equal Opportunity Cell ────────────────────────────────────────────────
   equalOpportunityCell: {
-    description: 'The Equal Opportunity Cell at GLEC is committed to fostering an inclusive campus environment where every student, regardless of gender, caste, religion, or socioeconomic background, has equal access to educational opportunities and a harassment-free learning experience.',
+    description: 'The activity of the Equal Opportunity Cell addresses problems of women employees and empowerment of women, aiming to enhance understanding of issues related to women and to make the college campus a safe place for women students.',
     members: [
       { name: 'Dr. Padmalaya Nayak', designation: 'Prof. & HOD CSE', role: 'Coordinator' },
       { name: 'Dr. M. Rekharani', designation: 'Asst. Prof., H&S', role: 'Member' },
@@ -1301,21 +1284,21 @@ const college = {
       { name: 'Sailaja Eswara', designation: 'Asst. Prof., H&S', role: 'Member' },
     ],
     objectives: [
-      'Foster awareness regarding equitable opportunities for women, driving positive attitude shifts',
-      'Promote behavioural transformation among female youth',
-      'Establish a harassment-free environment with accountability for equal treatment',
-      'Conduct empowerment initiatives addressing financial, emotional, mental, and physical wellbeing',
-      'Address sexual harassment complaints and discriminatory grievances with appropriate action',
+      'Create awareness on equal opportunity for women that will ultimately lead to improved attitude and behavior.',
+      'Bring about attitudinal and behavioral change in adolescent youth of the female gender.',
+      'Provide a harassment-free working atmosphere by identifying and fixing responsibility on the concerned persons for ensuring equal treatment of and participation by women in all areas.',
+      'Conduct programmes for ladies to empower them financially, emotionally, mentally, and physically.',
+      'Deal appropriately with reported cases of sexual harassment, abuse, or discrimination, and initiate action against particular grievances in respect of unfair treatment due to gender bias.',
     ],
     activities: [
-      'Seminars, workshops, and conferences on gender equality',
-      'Personality development programs',
-      "Women's health initiatives",
-      'Engagement with accomplished women professionals',
-      'Competitive sports and games',
-      'Self-Defence Training — two sessions each year for first-year students, conducted by N. Lakshmi Samrajyam, founder of the Rudrama Devi Self-Defence Academy',
-      "International Women's Day (8 March 2024) — themed \"DigitALL: Innovation and Technology for Gender Equality\", with Chief Guest Smt. Tangirala Vidya Rani, High Court advocate",
-      'International Yoga Day sessions led by Dr. Giriraj T. Kulkarni and certified yoga trainer Sailaja Simma',
+      'Seminars, Workshops, Conferences',
+      'Personality Development Programs',
+      'Women Health Development Programs',
+      'Interacting with women achievers from various fields',
+      'Competition and Games',
+      'Self-Defense Training Program — two sessions of Self Defense for I year students were conducted every year by N. Lakshmi Samrajyam, founder of the Rudrama Devi self-defense academy, who cautioned students with lively interactive sessions and demonstrated self-defense mechanisms, and noted that every woman should be aware of various laws and the POCSO Act so they can prevent or protect themselves from harassment.',
+      'International Women\'s Day — celebrated on 8th March 2024, with celebrations beginning with a video displaying all women faculty members alongside the slogan "Embrace Equity." WDC Coordinator and Convener of Women\'s Day celebrations, Dr. G. Mamatha, read the theme for International Women\'s Day 2023, "DigitALL: Innovation and Technology for Gender Equality." Principal Dr. A. Sai Hanuman garu greeted and appreciated the contributions of women and encouraged women to come up with innovation. The Chief Guest, Smt. Tangirala Vidya Rani, an advocate at High Court by profession and an artist by passion, delivered a thought-provoking speech on the importance of perseverance and hard work.',
+      'Program on Yoga Day — International Yoga Day aims to transform yoga into a widespread movement that emphasizes women\'s wellbeing and promotes global health and peace. By practicing yoga, women can cultivate a sense of empowerment, resilience, and overall wellbeing. Dr. Giriraj T. Kulkarni and certified yoga trainer Sailaja Simma spoke on health and mental wellbeing.',
     ],
     activityPhotos: [
       { image: '/images/equal-opportunity/self-defence-training.jpg', caption: 'Self-Defence Training' },
@@ -1327,7 +1310,7 @@ const college = {
   // ── ICC ───────────────────────────────────────────────────────────────────
   icc: {
     fullName: 'Internal Complaints Committee',
-    description: 'The Internal Complaints Committee (ICC) at GLEC ensures a safe and respectful environment for all members of the institution by handling complaints related to sexual harassment and discrimination with fairness, confidentiality, and impartiality.',
+    description: 'The Internal Complaints Committee (ICC) is a dedicated body within the institution tasked with handling complaints related to sexual harassment and discrimination in the workplace. Mandated by laws and regulations such as the Sexual Harassment of Women at Workplace Act, the ICC ensures fair and impartial investigation of complaints while maintaining confidentiality throughout the process. The Principal and the management are presented with the recommendations of the committee and are further requested to ensure redressal of the same for action.',
     members: [
       { name: 'Dr. B. Deepa', designation: 'Associate Professor', role: 'Chairman', email: 'deepahyd@gmail.com', phone: '9866193863' },
       { name: 'Mrs. B. Aruna', designation: 'Assistant Professor', role: 'Member', email: 'maniaddla@gmail.com', phone: '7386252424' },
@@ -1358,7 +1341,7 @@ const college = {
 
   // ── Ombudsperson ──────────────────────────────────────────────────────────
   ombudsperson: {
-    description: 'For grievances that fall outside the purview of college management, the Registrar of Osmania University serves as Ombudsperson for GLEC, in accordance with UGC regulations.',
+    description: 'Gokaraju Lailavathi Engineering College (GLEC) is approved by the All India Council for Technical Education (AICTE) and affiliated to Osmania University (OU), Hyderabad, and is sponsored by and functions under the aegis of the Gokaraju Rangaraju Educational Society (GRES). For all types of grievances that would arise for resolution outside the purview of the College Management, the Registrar of Osmania University would be approached to function as Ombudsperson. By virtue of the affiliated nature of the college, the appointment of the Ombudsperson is at the discretion of the Registrar, Osmania University. Contact details are furnished below.',
     name: 'Dr. Gaddam Naresh Reddy',
     title: 'Registrar, Osmania University',
     subtitle: 'Professor, University College of Commerce, Osmania University',
@@ -1369,7 +1352,7 @@ const college = {
 
   // ── RTI Act ───────────────────────────────────────────────────────────────
   rtiAct: {
-    description: 'In accordance with the Right to Information Act, 2005 (effective 15 June 2005), GLEC is committed to transparency and accountability in its administration. The following officers are designated to handle RTI requests concerning the institution.',
+    description: 'The Right to Information Act, 2005 (22 of 2005) was enacted by Parliament and came into force on 15 June 2005. This Act provides for the right to information for citizens to secure access to information under the control of public authorities, in order to promote transparency and accountability in the working of every public authority. All Universities and Colleges established by law made by Parliament or by State Legislature, or by notification by the appropriate Government, or owned, controlled, or substantially financed directly or indirectly by funds provided by the Government, come within the meaning of a Public Authority under this Act. For any information related to GLEC, students, parents, and staff can contact the following officers.',
     officers: [
       { name: 'K.V.S. Raju', designation: 'Registrar, GLEC', role: 'Public Information Officer (PIO)', email: 'aogriet@gmail.com', phone: '9339818181' },
       { name: 'K. Srinivasa Rao', designation: 'Assistant Professor', role: 'Assistant Public Information Officer (APIO)', email: 'srinivasaraokglwec@gmail.com', phone: '9441283890' },
@@ -1397,72 +1380,84 @@ const college = {
       { name: 'Mr. K. Srinivasa Rao', designation: 'Asst. Prof., CSE (AI&ML) Dept.', category: 'Coordinator, IQAC', role: 'Member' },
     ],
     aims: [
-      'Develop a system for conscious, consistent, and catalytic action to improve academic and administrative performance',
-      'Periodic assessment and benchmarking against quality standards in higher education',
-      'Internal quality checks across all programmes, departments, and administrative functions',
+      'The primary aim of IQAC is to develop a system for conscious, consistent, and catalytic action to improve the academic and administrative performance of the institution.',
+      'Periodic assessment of benchmarks for all courses and programmes.',
+      'Instant internal quality checks for improvement of academic quality.',
+      'Identification of strong, medium, and low pace performers and providing suitable academic attachments and assignments.',
+      'Strive towards holistic quality of both students and faculty.',
+      'Turnaround strategies for resource mobilization for R&D, consultancy, and extension activities.',
+      'Enhance collaborative learning skills among stakeholders.',
     ],
     functions: [
-      'Direct and indirect assessment of course outcomes and programme outcomes',
-      'Teaching-learning process facilitation using ICT-enabled tools and methods',
-      'Stakeholder feedback metrics collection, analysis, and action planning',
-      'Organisation of faculty development workshops, seminars, and training programmes',
-      'Industry-institute interaction facilitation for curriculum relevance',
-      'Annual Quality Assurance Report (AQAR) preparation and submission',
+      'Direct & Indirect Assessment & Evaluation of benchmarks for various courses/subjects.',
+      'Direct & Indirect Attainment of benchmarks for various courses/subjects.',
+      'Assessment and Attainment of Course Outcomes and Programme Outcomes.',
+      'Facilitating enhancement of participatory teaching learning process using ICT.',
+      'Develop Metrics and Evaluation for stakeholder\'s feedback, Analysis & Measures.',
+      'Promulgation & Pronouncement of institutional quality standards/parameters amongst stakeholders.',
+      'Organize workshops, seminars, conferences, symposiums, and development programmes for both faculty and students.',
+      'Encourage student and faculty participation in workshops, seminars, conferences, symposiums, and development programmes.',
+      'Documentation of impact of various programmes attended and organized both by the student and faculty members leading to quality improvement.',
+      'Encourage & involve both students and faculty members in Industry-Institute-Interaction programmes.',
+      'Encourage & involve both students and faculty in professional development and association activities.',
+      'Development of Quality Culture among stakeholders of the institution.',
+      'Prepare Annual Quality Assurance Report (AQAR) & upload in website.',
     ],
     strategicFocus: [
-      'Teaching-learning process optimisation',
-      'Evaluation credibility and transparency',
-      'Research activity relevance and enhancement',
-      'Cost-effective academic accessibility',
-      'Infrastructure adequacy assessment',
-      'Resource mobilisation for consulting and extension services',
+      'Ensuring timely, efficient, and progressive performance of academic, administrative, and financial tasks.',
+      'Optimization and integration of modern methods of teaching and learning.',
+      'Ensuring the credibility of evaluation procedures.',
+      'Ensuring the adequacy, maintenance, and functioning of the support structure and services.',
+      'Establish the relevance of academic quality to augment R&D activities.',
+      'Provide access to various cost-effective academic programmes to all sections of society.',
+      'Use of modern methods of teaching and learning.',
+      'Develop suitable rubrics to attain and assess academic quality.',
+      'Deploy resources for strong support to infra-structure and technical-services.',
+      'Focus on resource mobilization for consultancy.',
+    ],
+    benefits: [
+      'Ensures a heightened level of clarity and focus in institutional functioning towards quality enhancement',
+      'Ensures internalization of the quality culture',
+      'Ensures enhancement and coordination among various activities of the institution and institutionalizes all good practices',
+      'Provides a sound basis for decision-making to improve institutional functioning',
+      'Acts as a dynamic system for quality changes in Higher Education Institutions',
+      'Builds an organized methodology of documentation and internal communication',
     ],
   },
 
   // ── Academic Collaborations ───────────────────────────────────────────────
+  academicCollaborationsIntro: 'A memorandum of understanding is an agreement between two or more parties outlined in a formal document. It is not necessarily legally binding, which depends on the signatories\' intent and the language in the agreement, but signals the willingness of the parties to move forward with a contract. Gokaraju Lailavathi Engineering College (GLEC) is having Academic Collaborations with many organizations like…',
   academicCollaborations: [
-    {
-      name: 'Infosys',
-      type: 'Industry-Academia MOU',
-      desc: 'Strategic partnership with Infosys for student skill development, internship opportunities, campus placement support, and curriculum alignment with industry standards.',
-    },
-    {
-      name: 'SR University',
-      type: 'Inter-Institutional MOU',
-      desc: 'Collaborative agreement with SR University for joint research initiatives, faculty exchange programmes, and cross-institutional knowledge sharing.',
-    },
-    {
-      name: 'Suntek Corp Solutions Pvt. Ltd.',
-      type: 'Corporate MOU',
-      desc: 'Partnership with Suntek Corp Solutions for student internships, live project engagements, and industry-exposure programmes aligned with real-world IT environments.',
-    },
-    {
-      name: 'Human Capital for Third Sector',
-      type: 'Social Sector MOU',
-      desc: 'Collaboration focused on social sector skill development, community engagement initiatives, and career opportunities for students in the development sector.',
-    },
+    { name: 'Infosys' },
+    { name: 'SR University' },
+    { name: 'Suntek Corp Solutions Pvt. Ltd.' },
+    { name: 'Human Capital for Third Sector' },
   ],
 
   // ── Examination Committee ─────────────────────────────────────────────────
   examinationCommittee: {
     email: 'examglec@gmail.com',
     calendarPdf: '/downloads/examinations/acadamic-calender.pdf',
-    description: 'The Examination Committee at GLEC administers sessional and end-semester examinations in accordance with the Osmania University almanac, ensuring fair, transparent, and efficient conduct of all examinations.',
+    description: 'A major strength of GLEC is its Examination Cell, which plays a crucial role in efficiently handling examination administration for the institution.',
     members: [
-      { name: 'Dr. A. Sai Hanuman', staffId: '1001', designation: 'Chief Superintendent', qualification: 'M.Tech, Ph.D', doj: '08-04-2021', phone: '9849078370' },
-      { name: 'P. Gopi Krishna', staffId: '1006', designation: 'Controller of Examinations', qualification: 'M.Sc.', doj: '14-09-2021', phone: '9703643628' },
-      { name: 'Dr. K. Deepthi Varma', staffId: '1009', designation: 'In-charge Examinations', qualification: 'M.Sc, Ph.D', doj: '01-10-2021', phone: '9949430761' },
-      { name: 'N. Madhusudhan Rao', staffId: '1038', designation: 'Coordinator', qualification: 'M.Tech', doj: '13-09-2021', phone: '9010527205' },
-      { name: 'P.M. Madhuri', staffId: '1017', designation: 'Coordinator', qualification: 'M.Tech', doj: '01-11-2021', phone: '8374124317' },
-      { name: 'M. Sneha Priya', staffId: '1016', designation: 'Coordinator', qualification: 'M.Tech', doj: '25-10-2021', phone: '7659991957' },
+      { name: 'Dr. A. Sai Hanuman', staffId: '1001', designation: 'Chief Superintendent', qualification: 'M.Tech, Ph.D', doj: '08-04-2021', phone: '9849078370', email: 'admn@gmail.com' },
+      { name: 'P. Gopi Krishna', staffId: '1006', designation: 'Controller of Examinations', qualification: 'M.Sc.', doj: '14-09-2021', phone: '9703643628', email: 'gopiglwec@gmail.com' },
+      { name: 'Dr. K. Deepthi Varma', staffId: '1009', designation: 'In-charge Examinations', qualification: 'M.Sc, Ph.D', doj: '01-10-2021', phone: '9949430761', email: 'deepthivarmakatari.glwec@gmail.com' },
+      { name: 'N. Madhusudhan Rao', staffId: '1038', designation: 'Coordinator', qualification: 'M.Tech', doj: '13-09-2021', phone: '9010527205', email: 'madhuglwec@gmail.com' },
+      { name: 'P.M. Madhuri', staffId: '1017', designation: 'Coordinator', qualification: 'M.Tech', doj: '01-11-2021', phone: '8374124317', email: 'pmmadhuri18@gmail.com' },
+      { name: 'M. Sneha Priya', staffId: '1016', designation: 'Coordinator', qualification: 'M.Tech', doj: '25-10-2021', phone: '7659991957', email: 'snehapriya.glwec@gmail.com' },
     ],
     functions: [
-      'Administering sessional and end-semester examinations as per Osmania University almanac',
-      'Recording theory and practical marks in university portals',
-      'Conducting result analysis for academic performance improvement',
-      'Notifying parents about exam results and absenteeism via SMS and post',
-      'Preparing inspection documentation for OU, AICTE, and governance bodies',
-      'Handling answer script evaluation and mark recording',
+      'Administering sessional exams for B.E. in accordance with the Osmania University (OU) almanac.',
+      'Examining sessional exam answer scripts to ensure proper assessment.',
+      'Overseeing the recording of sessional marks for theory and practical subjects in the OU portal and ledger.',
+      'Notifying parents about sessional exam absentees through SMS.',
+      'Dispatching sessional exam marks to parents via SMS.',
+      'Dispatching end-semester examination result memos to parents through post mail.',
+      'Mailing end-semester examination result memos to parents.',
+      'Administering end-semester practical exams and recording marks in the OU portal.',
+      'Conducting result analysis for sessional and end-semester exams.',
+      'Compiling necessary documents for inspections conducted by OU, AICTE, and Governing Body meetings.',
     ],
   },
 
@@ -1495,23 +1490,23 @@ const college = {
     { title: 'B.E. Osmania University Feb/Mar 2025 Exams Time Table', date: '', link: '/downloads/examinations/25-01-2025aicte.pdf', type: 'Academic' },
     { title: 'Osmania University Revaluation Results — Feb/Mar 2025', date: '29 May 2025', link: 'https://www.osmania.ac.in/examination-results.php', type: 'Revaluation' },
     { title: 'Osmania University Results — Feb/Mar 2025', date: '11 Apr 2025', link: 'https://www.osmania.ac.in/examination-results.php', type: 'Results' },
-    { title: 'B.E. (CBCS) & Non-CBCS Revaluation Results — Aug/Sept 2024', date: '31 Dec 2024', link: 'https://www.osmania.ac.in/examination-results.php', type: 'Revaluation' },
+    { title: 'B.E. (CBCS) (RV) Aug/Sept-2024 Results', date: '31 Dec 2024', link: 'https://www.osmania.ac.in/examination-results.php', type: 'Revaluation' },
+    { title: 'B.E. (Non-CBCS) (RV) Aug/Sept-2024 Results', date: '31 Dec 2024', link: 'https://www.osmania.ac.in/examination-results.php', type: 'Revaluation' },
     { title: 'B.E. Semester Results I–VI Sem. Feb-2023 & VIII Sem. Jun-2023 Revaluation', date: '28 Aug 2023', link: 'https://www.osmania.ac.in/examination-results.php', type: 'Results' },
   ],
 
   // ── Alumni Association ─────────────────────────────────────────────────────
   alumniAssociation: {
-    mission: 'Gokaraju Lailavathi Engineering College (GLEC) Alumni Association is formed with a view to create a platform that helps improve student interaction and relations beyond the completion of their course at GLEC.',
-    description: 'The Alumni Association Committee coordinates engagement between GLEC and its graduates, organising reunions and maintaining ties between alumni, faculty, and current students.',
+    mission: 'Gokaraju Lailavathi Engineering College (GLEC) Alumni Association is formed with a view to create a platform that helps improve student interaction and relations beyond the completion of their course at GLEC. It is to keep alive memories that are cherished and ensure connections that are nourished for a lifetime. Besides, it is a forum for discussion that plays an instrumental role in academic exploration by way of queries by juniors for guidance and advice by the seniors from their experience. Indeed, the alumni association is a wonderful tool for real-time learning with which knowledge is transferred, information is shared, events are notified, emotions are echoed, the moments of the salad days are relived, interpersonal bonds are periodically reinforced, and community service activities are initiated. It is all about enterprise, inspiration, mentoring, and even corrective action.',
     members: [
-      { sno: 1, name: 'Dr. A. Ushasree',      position: 'Incharge',                      role: 'Alumni Relations' },
-      { sno: 2, name: 'Mrs. P. M. Maduri',    position: 'Coordinator',                   role: 'Alumni Relations' },
-      { sno: 3, name: 'Mr. R. Sai Nikhil',    position: 'Coordinator',                   role: 'Alumni Relations' },
+      { sno: 1, name: 'Dr. A. Ushasree',      position: 'Asst. Prof., CSE',               role: 'Incharge Alumni Association' },
+      { sno: 2, name: 'Mrs. P. M. Maduri',    position: 'Asst. Prof., CSE',               role: 'Coordinator Alumni Association' },
+      { sno: 3, name: 'Mr. R. Sai Nikhil',    position: 'Asst. Prof., CSE',               role: 'Coordinator Alumni Association' },
       { sno: 4, name: 'Dr. Padmalaya Nayak',  position: 'HOD, CSE',                       role: 'Member' },
       { sno: 5, name: 'Dr. J. Kishore Babu',  position: 'HOD, H&S',                       role: 'Member' },
-      { sno: 6, name: 'Ms. B. Arthi Reddy',   position: 'CSE Student (2021–25 Batch)',    role: 'Student Member' },
-      { sno: 7, name: 'Ms. B. Sripada',       position: 'IT Student (2021–25 Batch)',     role: 'Student Member' },
-      { sno: 8, name: 'Ms. P. Sriya',         position: 'IT Student (2021–25 Batch)',     role: 'Student Member' },
+      { sno: 6, name: 'Ms. B. Arthi Reddy',   position: 'CSE Student (2021–25 Batch)',    role: 'Member' },
+      { sno: 7, name: 'Ms. B. Sripada',       position: 'IT Student (2021–25 Batch)',     role: 'Member' },
+      { sno: 8, name: 'Ms. P. Sriya',         position: 'IT Student (2021–25 Batch)',     role: 'Member' },
     ],
   },
 
@@ -1539,7 +1534,9 @@ const college = {
       { name: 'Administration',            note: 'Dr. K.V.S. Raju, Registrar',  icon: 'principal' },
       { name: 'Scholarships',              note: 'Mrs. IVSS Nagamani',          icon: 'accounts' },
       { name: 'Bonafides & Bus Passes',    note: 'Mrs. IVSS Nagamani',          icon: 'admissions' },
+      { name: 'Transcripts & Certificates', note: 'Examination Branch',         icon: 'exam' },
       { name: 'Grievance Redressal',       link: '/administration/grievance',   icon: 'exam' },
+      { name: 'Website Related Queries',   note: 'K. Srinivasa Rao, Asst. Professor, Department of IT', icon: 'principal' },
     ],
     womensHelpline: '+91 7675802603',
     aicteFeedback: {
@@ -1555,7 +1552,7 @@ const college = {
       exam: 'TG EAPCET',
       affiliation: 'Osmania University, Hyderabad',
       approval: 'AICTE, New Delhi',
-      intro: 'Gokaraju Lailavathi Engineering College (GLEC) — formerly Gokaraju Lailavathi Womens Engineering College — is a co-education institution from the academic year 2024–25, now welcoming both boys and girls. Admissions to B.E. programmes are conducted through TG EAPCET counselling by the Telangana State Council for Higher Education (TSCHE). The institution is AICTE-approved and affiliated with Osmania University, Hyderabad.',
+      intro: 'The candidates who want to seek admission in GLEC have to qualify in the EAPCET (Engineering and Pharmacy Common Entrance Test) examination conducted by the Government of Telangana. To be eligible for appearing in the EAPCET examination, the student should have passed the 10+2 with Maths, Physics, and Chemistry as their main stream. The candidates should attend the counselling for admission into the Engineering colleges conducted by the Convenor. Based on the rank obtained in EAPCET, candidates can opt for GLEC as per the availability of the college and branch at the time of counselling.',
       keyFacts: [
         { label: 'Counselling Code', value: 'GLWC' },
         { label: 'Counselling Exam', value: 'TG EAPCET / TG ECET' },
@@ -1568,7 +1565,7 @@ const college = {
     programs: [
       { name: 'B.E. Computer Science & Engineering', code: 'CSE', intake: 360, duration: '4 Years', affiliation: 'Osmania University' },
       { name: 'B.E. CSE (Artificial Intelligence & Machine Learning)', code: 'CSE (AI&ML)', intake: 120, duration: '4 Years', affiliation: 'Osmania University' },
-      { name: 'B.E. Information Technology', code: 'IT', intake: 60, duration: '4 Years', affiliation: 'Osmania University' },
+      { name: 'B.E. Information Technology', code: 'IT', intake: 120, duration: '4 Years', affiliation: 'Osmania University' },
       { name: 'B.E. Computer Science', code: 'CS', intake: 60, duration: '4 Years', affiliation: 'Osmania University' },
       { name: 'B.E. Humanities & Sciences', code: 'H&S', intake: null, duration: '4 Years', affiliation: 'Osmania University' },
     ],
@@ -1657,19 +1654,14 @@ const college = {
     },
     procedure: {
       eapcet: [
-        { step: '01', title: 'Qualify TG EAPCET', desc: 'Appear and qualify in the Telangana State Engineering Agricultural and Pharmacy Common Entrance Test (TG EAPCET) conducted by TSCHE, Hyderabad.' },
-        { step: '02', title: 'Register for Counselling', desc: 'Register on the official TSCHE counselling portal (tgeapcet.nic.in) with your hall ticket number, rank, and required personal details.' },
-        { step: '03', title: 'Certificate Verification', desc: 'Attend certificate verification at any designated Help Line Centre (HLC) with originals and self-attested copies of all required documents.' },
-        { step: '04', title: 'Exercise Web Options', desc: 'Enter college and branch preferences in order of priority online during the specified web options window. Enter GLWC to find GLEC.' },
-        { step: '05', title: 'Seat Allotment', desc: 'Seats are allotted based on merit, category, and preferences. Download the allotment order from the TSCHE counselling portal.' },
-        { step: '06', title: 'Report to GLEC', desc: 'Report to GLEC with the allotment order and original certificates within the stipulated time. Pay the fee to confirm your admission.' },
+        { step: '01', title: 'Pass Intermediate Examination', desc: 'A pass at the Intermediate Examination of the Telangana State Intermediate Board with Physics, Chemistry, and Mathematics, or equivalent.' },
+        { step: '02', title: 'Qualify EAPCET', desc: 'Qualify at the Entrance Examination (EAPCET) conducted by the Telangana State Council for Higher Education, Hyderabad.' },
+        { step: '03', title: 'Merit Seats — 70%', desc: '70% of the seats are allotted based on the merit in the EAPCET.' },
+        { step: '04', title: 'Management / NRI Seats — 30%', desc: '30% of the seats are earmarked for Management/NRI candidates.' },
       ],
       management: [
-        { step: '01', title: 'Contact Admissions Office', desc: 'Reach out to the GLEC admissions office at +91 7207344440 or submit an online enquiry. Management quota seats are 30% of total intake.' },
-        { step: '02', title: 'Verify Eligibility', desc: 'Ensure you have passed 10+2 / Intermediate with Physics, Chemistry, and Mathematics (PCM) from a recognised board.' },
-        { step: '03', title: 'Submit Application', desc: 'Fill and submit the management quota application form along with self-attested copies of required documents to the admissions office.' },
-        { step: '04', title: 'Confirmation & Fee Payment', desc: 'Management will review the application and confirm seat allocation. Pay fees as per TSFRC-approved rates to secure admission.' },
-        { step: '05', title: 'Document Submission', desc: 'Submit original certificates at the college for verification and complete all admission formalities before the deadline.' },
+        { step: '01', title: 'Second Year (Lateral Admission)', desc: 'A pass at Diploma in Engineering/Polytechnic.' },
+        { step: '02', title: 'Qualify E-CET', desc: 'Qualifying at the Entrance Examination (E-CET) conducted by the Telangana State Council for Higher Education, Hyderabad.' },
       ],
     },
     eligibility: {
@@ -1746,20 +1738,18 @@ const college = {
       { title: 'Academic Calendar 2025–26 — Download', date: '01 Aug 2025', type: 'Academic', link: '/downloads/examinations/acadamic-calender.pdf' },
     ],
     feeRefund: {
-      desc: 'The following refund policy is applicable to all students admitted to GLEC, in compliance with AICTE, TSCHE, and institutional guidelines.',
       cases: [
-        { title: 'Technical Payment Issues', desc: 'If a payment is debited from the student\'s account but does not reflect in the ERP system due to a technical error, the amount will be recorded manually within 7–10 working days after confirmation from the payment gateway.' },
-        { title: 'Duplicate Payments', desc: 'In case of duplicate charges confirmed by the payment gateway, the excess amount will be refunded to the source account or credited toward the following month\'s fee within 7–10 working days.' },
-        { title: 'Caution Deposit', desc: 'Caution deposits collected for library books or other institutional purposes will be refunded after successful completion of the academic year or full programme, subject to clearance of dues.' },
-        { title: 'Other Payments', desc: 'For any other refund requests not covered above, parents should contact the college administration directly. The college\'s decision on such requests is final and binding.' },
+        { title: 'Technical Issue', desc: 'In the event of a technical issue where the payment is debited from the payer\'s account but does not reflect in our official ERP system, yet the payment gateway confirms a successful settlement, the payment will be manually recorded in our ERP. This process may take approximately 7-10 working days for the amount to be credited to the College\'s account.' },
+        { title: 'Multiple Payments Case', desc: 'In case of duplicate payments, as confirmed by the payment gateway service, the College will process a refund once the payment is received in the College\'s account, which typically takes 7-10 working days. Alternatively, the payer may request to have the excess amount adjusted against the fee for the following month.' },
+        { title: 'Caution Deposit', desc: 'Caution deposit collected towards library books (if any) etc. shall be refunded after completing the Academic Year / Course.' },
+        { title: 'Other Payments Case', desc: 'For all other cases involving discrepancies in fee payments, parents are required to directly contact the College. The College\'s decision in such matters will be final and binding.' },
       ],
       processingTime: '7–10 working days',
-      contact: 'accounts@glwec.in',
     },
     faqs: [
       { q: 'What is the TG EAPCET counselling code for GLEC?', a: 'The TG EAPCET counselling code for GLEC is GLWC. Select "Boys & Girls" in the gender preference during counselling, as GLEC is now co-educational.' },
       { q: 'Is GLEC now co-educational?', a: 'Yes. GLEC (formerly Gokaraju Lailavathi Womens Engineering College) converted to co-education from academic year 2024–25. Both boys and girls are eligible for admission across all programmes.' },
-      { q: 'What programmes are offered and what is the seat intake?', a: 'GLEC offers B.E. in CSE (360 seats), B.E. in CSE AI&ML (120 seats), B.E. in IT (60 seats), B.E. in Computer Science (60 seats), and B.E. in Humanities & Sciences.' },
+      { q: 'What programmes are offered and what is the seat intake?', a: 'GLEC offers B.E. in CSE (360 seats), B.E. in CSE AI&ML (120 seats), B.E. in IT (120 seats), B.E. in Computer Science (60 seats), and B.E. in Humanities & Sciences.' },
       { q: 'What is the eligibility for B.E. admission?', a: 'Pass in 10+2 / Intermediate with Physics, Chemistry, and Mathematics. Minimum 45% aggregate in PCM (40% for SC/ST). TG EAPCET qualification is required for the 70% merit category seats.' },
       { q: 'What is the annual fee for B.E. programmes?', a: 'The tuition fee is ₹70,000 per year. Special fee is ₹5,500 in I Year and ₹2,500 in subsequent years. Total fee for I Year: ₹75,500.' },
       { q: 'Are government scholarships available?', a: 'Yes. SC, ST, BC, EBC, and Minority students are eligible for fee reimbursement through the Telangana ePASS portal. AICTE Pragati and Saksham scholarships are also available for eligible students.' },
@@ -1789,8 +1779,9 @@ const college = {
           { title: 'Intelligent Computing on IOT 2.0, Big Data Analytics and Block Chain Technology', authors: 'M. S. Obaidat, Dr. Padmalaya Nayak, Niranjan K. Ray', venue: 'Edited Book', publisher: 'Taylor & Francis', doi: 'doi.org/10.12001/9781003326236', type: 'Book' },
           { title: 'Artificial Neural Network based Clustering in Wireless Sensor Networks to balance energy Consumption', authors: 'P. Nayak, V. Trivedi, S. Gupta', venue: 'Cogent Engineering, Vol. 11', publisher: 'Taylor & Francis', type: 'Journal' },
           { title: 'Comparison of Stability and Thermophysical Properties of CNT-GNP Hybrid Nanofluids using different Surface Modification Techniques', authors: 'B. Sanduru, S. Vadapalli, K. Satyanarayana, D. V. Nemova, A. Joshi', venue: 'Cogent Engineering, Vol. 11', publisher: 'Taylor & Francis', type: 'Journal' },
-          { title: 'Quality by Design Tool Evaluated Green Stability-Indicating UPLC Content Determination Method for Olanzapine and Samidorphan Dosage Form', authors: 'Jyothsna Menda, Vaishnavi Chintala, et al.', venue: 'Microchemical Journal, Vol. 197', publisher: 'Elsevier', type: 'Journal' },
-          { title: 'Fabrication and Mechanical Properties of Hybrid Fibre-Reinforced Polymer Composite with Graphene Nanoplatelets and MWCNTs', authors: 'B. R. Reddivari, S. Vadapalli, B. Sanduru, T. Buddi, et al.', venue: 'Cogent Engineering, Vol. 11', publisher: 'Taylor & Francis', type: 'Journal' },
+          { title: 'Quality by Design Tool Evaluated Green Stability-Indicating UPLC Content Determination Method for Olanzapine and Samidorphan Dosage Form', authors: 'Jyothsna Menda, Vaishnavi Chintala, Leela Prasad Kowtharapu, Surya Prakash Rao Pydimarry, Phani Raja Kanuparthy, Naresh Kumar Katari', venue: 'Microchemical Journal, Vol. 197', publisher: 'Elsevier', type: 'Journal' },
+          { title: 'Fabrication and Mechanical Properties of Hybrid Fibre-Reinforced Polymer Composite with Graphene Nanoplatelets and MWCNTs', authors: 'B. R. Reddivari, S. Vadapalli, B. Sanduru, T. Buddi, K. M. Vafaeva, A. Joshi', venue: 'Cogent Engineering, Vol. 11', publisher: 'Taylor & Francis', type: 'Journal' },
+          { title: 'Quality by Design Tool-Evaluated Stability-Indicating UPLC Method for the Determination of Drugs (Ritonavir and Darunavir) Used to Treat HIV/AIDS', authors: 'J. Menda, P. R. Kanuparthy, N. K. Katari, L. P. Kowtharapu, S. K. Ettaboina, S. P. R. Pydimarry', venue: 'Bio-Medical Chromatography, Vol. 37, Issue 9', publisher: 'Wiley', type: 'Journal' },
           { title: 'Life Cycle Analysis of Energy Storage Technologies: A Comparative Study', authors: 'B. Sanduru, M. Dhyani, R. Thakur, S. Dixit', venue: 'SDEA Proceedings, Vol. 537', publisher: 'E3S', type: 'Conference' },
           { title: 'Particle Swarm Optimization for Sizing of Solar-Wind Hybrid Microgrids', authors: 'B. Sanduru, A. S. Negi, N. Sharma, L. Bhalla', venue: 'SDEA Proceedings, Vol. 537', publisher: 'E3S', type: 'Conference' },
         ],
@@ -1845,41 +1836,17 @@ const college = {
     ],
 
     awards: {
-      desc: 'GLEC faculty members consistently receive recognition for their outstanding research contributions. The institution honours researchers with cash incentives, certificates, and mementos through an annual Research Excellence Award programme.',
-      categories: [
-        { title: 'Best Research Paper Award', desc: 'Awarded to faculty/students with the most impactful published paper in a Scopus/Web of Science-indexed journal or reputed conference each academic year.' },
-        { title: 'Research Excellence Award', desc: 'Recognises faculty who demonstrate consistent research output — publishing in high-impact journals, presenting at international conferences, and securing funded projects.' },
-        { title: 'Young Researcher Award', desc: 'Encourages early-career faculty and research students who show exceptional promise through novel research contributions and publications.' },
-        { title: 'Innovation & Patent Award', desc: 'Celebrates faculty and student inventors who file or receive patents for novel technological solutions and innovations.' },
-      ],
+      desc: 'To strengthen research excellence, GRES is committed to achieving high-quality scientific research and actively contributing to scholarly publications. It fosters a strong research culture among faculty members, encouraging them to publish in prestigious indexing platforms such as Scopus, Web of Science, and SCI. To support this vision, GRES provides necessary resources, infrastructure, and funding opportunities for faculty to undertake innovative and impactful research. Additionally, it promotes interdisciplinary collaborations, enabling researchers to work on cutting-edge technologies and address real-world challenges. GLEC faculty members consistently receive Research Excellence Awards each year, recognizing their outstanding contributions with cash incentives, certificates, and mementos. These initiatives not only enhance the institution\'s research reputation but also inspire faculty to strive for continuous academic and scientific growth.',
     },
 
     facilities: [
       {
         name: 'Idea Lab',
-        desc: 'A state-of-the-art technological hub established to promote, nurture, and facilitate a robust platform for students and faculty to engage in innovative and collaborative research. The Idea Lab aspires to transform the institute into a centre of excellence.',
+        desc: 'GLEC aims to streamline research activities and contribute to advancements in products, processes, and systems. Its mission is to promote, nurture, and facilitate a robust platform for students, and faculty, fostering innovative and collaborative research. This initiative aspires to transform the institute into a center of excellence in education and research. To enhance research capabilities and foster a conducive research environment, the Idea Lab has been established with state-of-the-art technological infrastructure.',
         equipment: [
-          { name: '3D Printing', purpose: 'Enables rapid prototyping, iterative testing, and cost-effective experimentation for complex, customised structures in engineering, biomedicine, and materials research.', image: '/images/research/equipment/3d-printing.jpg' },
-          { name: 'Magnetic Stirrers with Hot Plates', purpose: 'Ensures precise mixing and controlled heating for chemical, biological, and material science experiments; maintains optimal reaction conditions for reproducible results.', image: '/images/research/equipment/magnetic-stirrers-with-hot-plates.jpg' },
+          { name: '3D Printing', purpose: '3D printing accelerates research by enabling rapid prototyping, iterative testing, and cost-effective experimentation. It allows the creation of complex, customized structures that traditional manufacturing cannot achieve, benefiting fields like engineering and biomedicine. This technology fosters innovation, collaboration, and efficient research and development.', image: '/images/research/equipment/3d-printing.jpg' },
+          { name: 'Magnetic Stirrers with Hot Plates', purpose: 'Magnetic stirrers with hot plates are vital research instruments that ensure precise mixing and controlled heating, enhancing experimental accuracy and efficiency. They provide uniform heat distribution and consistent agitation, which are essential for maintaining optimal reaction conditions in chemical, biological, and material science research. Their non-contact operation minimizes contamination risks, making them indispensable for high-precision research and reproducibility in advanced scientific investigations.', image: '/images/research/equipment/magnetic-stirrers-with-hot-plates.jpg' },
         ],
-      },
-      {
-        name: 'AI / ML Research Lab',
-        desc: 'Dedicated GPU-enabled workstations for deep learning model training, computer vision research, and large-scale NLP experiments using TensorFlow, PyTorch, and cloud-based HPC resources.',
-        equipment: [
-          { name: 'GPU Workstations', purpose: 'High-performance NVIDIA GPU systems for accelerated deep learning model training and inference experiments.' },
-          { name: 'Dataset Repository', purpose: 'Curated local and cloud datasets for computer vision, NLP, and tabular ML research across departments.' },
-        ],
-        image: null,
-      },
-      {
-        name: 'Chemistry & Nanotechnology Lab',
-        desc: 'Equipped for advanced materials research including nanofluid characterisation, polymer composites, and pharmaceutical analysis using UPLC, viscometers, and thermal measurement instruments.',
-        equipment: [
-          { name: 'UPLC System', purpose: 'Ultra-Performance Liquid Chromatography for pharmaceutical compound analysis and quality-by-design research.' },
-          { name: 'Nanofluid Characterisation Setup', purpose: 'Instruments for measuring thermal conductivity, viscosity, and stability of hybrid nanofluids for renewable energy applications.' },
-        ],
-        image: null,
       },
     ],
   },

@@ -77,11 +77,11 @@ const sections = [
       </svg>
     ),
     items: [
-      { name: 'Indoor Sports Hall', desc: 'Multi-purpose hall for badminton, table tennis, chess, carrom, and other indoor activities.' },
-      { name: 'Outdoor Play Areas', desc: 'Cricket, basketball, volleyball, kabaddi, athletics, throw ball, and tennikoit — with transport provided for students competing in inter-college and OU/JNTU-organised events beyond college hours.' },
-      { name: 'Fitness Centre', desc: 'Equipped gymnasium with cardio machines, free weights, and supervised fitness programmes.' },
-      { name: 'Sports Medical Support', desc: 'A full-time trained nurse on duty until 6:30 PM, a round-the-clock ambulance on campus, a 5-bed health centre, and first-aid boxes kept at the Sports & Games Department for medical emergencies during practice or events.' },
-      { name: 'Yoga & Wellness', desc: 'Dedicated space for yoga sessions, meditation, and mental wellness activities.' },
+      { name: 'Outdoor Games', desc: 'The Department of Physical Education conducts sports and games for staff and students in Cricket, Basketball, Volleyball, Kabbadi, Athletics, Throw Ball, and Tennikoit.' },
+      { name: 'Indoor Games', desc: 'Table Tennis, Carroms, Badminton, and Chess, encouraging holistic development of every student.' },
+      { name: 'Competitions', desc: 'Our students have excelled and won prizes in various intra-college, inter-college, and university competitions. Facilities are made available even beyond college hours, with transport provided for students participating in sports and games beyond college hours.' },
+      { name: 'Sports Medical Support', desc: 'A full-time trained staff nurse is appointed and stays up to 6:30 PM, attending to first-aid for students injured during sports and games. An ambulance with all facilities is available round the clock, five beds are provided in the health centre for any medical emergency, general medicines are made available, and first-aid boxes are kept in the Sports & Games Department.' },
+      { name: 'University-Level Participation', desc: 'Our students have also participated in various games and sports organized by Osmania University, JNTU, and other colleges.' },
     ],
   },
   {
@@ -109,12 +109,11 @@ const sections = [
       </svg>
     ),
     items: [
-      { name: 'Medical Room', desc: 'On-campus first-aid and medical room staffed during college hours with basic medications and trained personnel.' },
-      { name: 'Tie-up Hospitals', desc: 'Empanelled hospitals near campus for emergency medical care and specialist consultations.' },
-      { name: 'On-Campus Pharmacy', desc: 'On-campus pharmacy stocking common medications for students and staff.' },
-      { name: 'Counselling Cell', desc: 'Professional counsellors available for academic stress management and personal well-being support.' },
-      { name: 'Health Camps', desc: 'Regular health camps and check-ups conducted on campus for students and staff.' },
-      { name: 'Insurance Coverage', desc: 'Student insurance programme providing coverage for accidental and medical emergencies.' },
+      { name: 'Health Centers', desc: 'On-campus health centers provide basic medical services, often staffed by qualified doctors and nurses.' },
+      { name: 'Emergency Services', desc: 'Arrangements with nearby hospitals ensure students have access to emergency medical care.' },
+      { name: 'Pharmacy', desc: 'On-campus pharmacies provide easy access to medications and health supplies.' },
+      { name: 'Counseling Services', desc: 'Mental health support is available through counseling services for emotional and psychological well-being.' },
+      { name: 'Health Camps and Check-ups', desc: 'Regular health camps and check-ups help monitor and maintain students\' health.' },
     ],
   },
   {
@@ -128,11 +127,10 @@ const sections = [
       </svg>
     ),
     items: [
-      { name: 'Ramp Access', desc: 'Wheelchair-friendly ramps at all major building entrances and across campus pathways.' },
-      { name: 'Accessible Restrooms', desc: 'Specially designed restrooms on every floor equipped for differently-abled users.' },
-      { name: 'Reserved Seating', desc: 'Front-row and easily accessible seating reserved in all classrooms and seminar halls.' },
-      { name: 'Scribes for Examinations', desc: 'GLEC provides scribes for differently-abled students during examinations, in accordance with Osmania University and AICTE regulations.' },
-      { name: 'Support Staff', desc: 'Dedicated support staff to assist differently-abled students with daily academic and campus activities.' },
+      { name: 'Barrier-Free Environment', desc: 'GLEC has an architectural barrier-free environment that differently-abled persons find easy for their day-to-day functioning, addressing accessibility as per the stipulations of the Persons with Disabilities Act, 1995. All existing infrastructure is disabled-friendly, and future construction is also based on the principle of inclusion.' },
+      { name: 'Ramps and Hand Rails', desc: 'Apart from stair access and lifts, GLEC blocks are constructed with ramps and hand rails as sloped pathways providing access to buildings — an alternative to stairs for wheelchair users, people with mobility issues, and people with prams, bicycles, and other wheeled items.' },
+      { name: 'Mobility Devices', desc: 'Wheel chairs and walkers are made available in the College, along with special toilets and other necessary facilities to meet the needs of differently-abled persons.' },
+      { name: 'Scribes for Examinations', desc: 'GLEC provides scribes for differently-abled students if required during examinations, as per the OU and AICTE rules of examinations.' },
     ],
   },
 ];

@@ -213,17 +213,13 @@ function ProcedureContent() {
     <>
       <SectionHeader label="How to Apply" title="Admission Procedure" />
 
-      <SubHeading>{eapcet ? 'TG EAPCET Counselling — 70% Seats (Merit Category)' : ''}</SubHeading>
+      <SubHeading>First Year</SubHeading>
       <StepList steps={eapcet} />
 
       <div className="my-8 border-t" style={{ borderColor: `${primary}15` }} />
 
-      <SubHeading>Management Quota — 30% Seats</SubHeading>
+      <SubHeading>Second Year (Lateral Admission)</SubHeading>
       <StepList steps={management} />
-
-      <InfoCallout>
-        For TG ECET (Lateral Entry) candidates: apply through TSCHE ECET counselling. Lateral entry admits join the 2nd year B.E. directly, subject to seat availability.
-      </InfoCallout>
     </>
   );
 }
@@ -545,11 +541,10 @@ function NotificationsContent() {
 }
 
 function FeeRefundContent() {
-  const { desc, cases, processingTime, contact } = d.feeRefund;
+  const { cases, processingTime } = d.feeRefund;
   return (
     <>
       <SectionHeader label="Policy" title="Fee Refund Policy" />
-      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-8">{desc}</p>
 
       <div className="flex flex-col gap-5">
         {cases.map((c, i) => (
@@ -566,25 +561,11 @@ function FeeRefundContent() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-        <div className="rounded-xl p-5" style={{ backgroundColor: `${primary}08`, border: `1px solid ${primary}14` }}>
-          <p className="font-dm-sans font-semibold text-[11px] uppercase tracking-widest mb-1" style={{ color: `${primary}70` }}>
-            Processing Time
-          </p>
-          <p className="font-hind font-bold text-[20px]" style={{ color: primary }}>{processingTime}</p>
-        </div>
-        <div className="rounded-xl p-5" style={{ backgroundColor: `${primary}08`, border: `1px solid ${primary}14` }}>
-          <p className="font-dm-sans font-semibold text-[11px] uppercase tracking-widest mb-1" style={{ color: `${primary}70` }}>
-            Contact for Queries
-          </p>
-          <a
-            href={`mailto:${contact}`}
-            className="font-hind font-bold text-[16px] hover:underline"
-            style={{ color: primary }}
-          >
-            {contact}
-          </a>
-        </div>
+      <div className="rounded-xl p-5 mt-8 max-w-xs" style={{ backgroundColor: `${primary}08`, border: `1px solid ${primary}14` }}>
+        <p className="font-dm-sans font-semibold text-[11px] uppercase tracking-widest mb-1" style={{ color: `${primary}70` }}>
+          Processing Time
+        </p>
+        <p className="font-hind font-bold text-[20px]" style={{ color: primary }}>{processingTime}</p>
       </div>
     </>
   );

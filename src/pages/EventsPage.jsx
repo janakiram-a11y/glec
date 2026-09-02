@@ -33,46 +33,34 @@ const categories = [
 
 const events = [
   {
-    title: 'TECHNOVA 2025 — National Level Technical Symposium',
-    date: 'March 2025',
+    title: 'Technical Symposium',
     category: 'technical',
-    desc: 'A two-day national-level technical fest featuring paper presentations, project exhibitions, hackathon, coding contests, and expert keynote sessions from industry leaders.',
-    highlights: ['700+ participants', 'Cash prizes worth ₹1.5 Lakhs', '12 events across 5 departments'],
+    desc: 'A technical fest featuring paper presentations, project exhibitions, hackathons, coding contests, and expert keynote sessions from industry leaders.',
   },
   {
-    title: 'GLEC Cultural Fest — UTSAV 2025',
-    date: 'February 2025',
+    title: 'Cultural Fest',
     category: 'cultural',
-    desc: 'Annual cultural extravaganza celebrating music, dance, drama, fine arts, and fashion — showcasing the vibrant creative talent of GLEC students.',
-    highlights: ['500+ participants', 'Inter-college competitions', 'Celebrity guest performance'],
+    desc: 'Annual cultural celebration of music, dance, drama, fine arts, and fashion — showcasing the creative talent of GLEC students.',
   },
   {
-    title: 'Annual Sports Meet 2025',
-    date: 'January 2025',
+    title: 'Annual Sports Meet',
     category: 'sports',
-    desc: 'The annual inter-departmental sports meet with competitions in cricket, volleyball, basketball, badminton, athletics, and chess.',
-    highlights: ['300+ student athletes', '15 sports disciplines', 'Trophy & medals ceremony'],
+    desc: 'Inter-departmental sports meet with competitions in cricket, volleyball, basketball, badminton, athletics, and chess.',
   },
   {
-    title: 'SKILL Series Workshop — AI & Data Science',
-    date: 'December 2024',
+    title: 'SKILL Series Workshop',
     category: 'technical',
-    desc: 'A hands-on 3-day workshop on Artificial Intelligence and Data Science tools, covering Python, TensorFlow, data visualization, and real-world project development.',
-    highlights: ['Industry-led training', 'Certificate of completion', 'Project mentoring sessions'],
+    desc: 'Hands-on workshops on emerging technologies conducted under GLEC\'s SKILL Series, covering tools, frameworks, and real-world project development.',
   },
   {
-    title: 'Freshers Welcome — NAVARANG 2024',
-    date: 'October 2024',
+    title: 'Freshers Welcome',
     category: 'cultural',
-    desc: 'A grand welcome event for the 2024–25 batch featuring performances, talent hunts, and interactive introductions to college life at GLEC.',
-    highlights: ['Talent hunt competition', 'Faculty-student interaction', 'Campus orientation tour'],
+    desc: 'A welcome event for newly admitted students featuring performances, talent showcases, and an introduction to campus life at GLEC.',
   },
   {
-    title: 'IEEE & CSI Chapter Technical Talk Series',
-    date: 'November 2024',
+    title: 'IEEE & CSI Chapter Technical Talks',
     category: 'academic',
-    desc: 'Monthly expert talk series organized by the IEEE Student Branch and CSI Chapter featuring sessions by industry professionals and researchers.',
-    highlights: ['Monthly schedule', 'Industry expert speakers', 'IEEE/CSI membership benefits'],
+    desc: 'Expert talk sessions organised by the IEEE Student Branch and CSI Chapter featuring industry professionals and researchers.',
   },
 ];
 
@@ -130,16 +118,13 @@ export default function EventsPage() {
                 <div className="h-1 w-full" style={{ backgroundColor: cat.color }} />
 
                 <div className="p-6 flex flex-col flex-1 gap-4">
-                  {/* Category + date row */}
-                  <div className="flex items-center justify-between">
-                    <span
-                      className="font-dm-sans text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded"
-                      style={{ backgroundColor: cat.bg, color: cat.color }}
-                    >
-                      {cat.label}
-                    </span>
-                    <span className="font-dm-sans text-[12px] text-[#888888]">{ev.date}</span>
-                  </div>
+                  {/* Category */}
+                  <span
+                    className="font-dm-sans text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit"
+                    style={{ backgroundColor: cat.bg, color: cat.color }}
+                  >
+                    {cat.label}
+                  </span>
 
                   {/* Title */}
                   <h3
@@ -153,19 +138,6 @@ export default function EventsPage() {
                   <p className="font-hind text-[14px] leading-[22px] text-[#555555] flex-1">
                     {ev.desc}
                   </p>
-
-                  {/* Highlights */}
-                  <ul className="flex flex-col gap-1.5">
-                    {ev.highlights.map(h => (
-                      <li key={h} className="flex items-center gap-2">
-                        <span
-                          className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                          style={{ backgroundColor: cat.color }}
-                        />
-                        <span className="font-hind text-[13px] text-[#444444]">{h}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             );

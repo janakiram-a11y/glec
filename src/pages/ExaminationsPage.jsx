@@ -86,6 +86,7 @@ function CommitteeContent() {
           { key: 'qualification', label: 'Qualification' },
           { key: 'doj',           label: 'Date of Joining' },
           { key: 'phone',         label: 'Contact' },
+          { key: 'email',         label: 'Email' },
         ]}
       />
 

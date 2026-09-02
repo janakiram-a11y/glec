@@ -34,6 +34,7 @@ import PlacementsPage from './pages/PlacementsPage';
 import AlumniPage from './pages/AlumniPage';
 import MandatoryDisclosuresPage from './pages/MandatoryDisclosuresPage';
 import EventsPage from './pages/EventsPage';
+import InitiativePage from './pages/InitiativePage';
 
 export default function App() {
   return (
@@ -70,6 +71,9 @@ export default function App() {
         {/* Research — each section has its own route */}
         <Route path="/research" element={<ResearchPage />} />
         <Route path="/research/:section" element={<ResearchPage />} />
+
+        {/* Our Initiatives */}
+        <Route path="/initiatives/:slug" element={<InitiativePage />} />
 
         <Route path="/placements" element={<PlacementsPage />} />
         <Route path="/alumni" element={<AlumniPage />} />

@@ -46,6 +46,11 @@ export default function WhyChooseUs({ college }) {
           <p className="font-hind font-normal text-[16px] leading-6 text-[#666666]">
             {college.aboutP3}
           </p>
+          {college.aboutP4 && (
+            <p className="font-hind font-normal text-[16px] leading-6 text-[#666666]">
+              {college.aboutP4}
+            </p>
+          )}
           <div className="mt-4">
             <Link
               to="/about"

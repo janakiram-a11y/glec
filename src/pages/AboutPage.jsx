@@ -49,26 +49,6 @@ export default function AboutPage() {
       <div className="w-full bg-white section-pad">
         <div className="flex flex-col gap-16">
 
-          {/* Inspirer & Promoters */}
-          <section>
-            <SectionHeading primaryColor={college.primaryColor}>
-              About Inspirer and Promoters
-            </SectionHeading>
-            <p className="font-hind font-normal text-[16px] leading-6 text-[#474747]">
-              {college.aboutFounders}
-            </p>
-          </section>
-
-          {/* Sponsoring Society */}
-          <section>
-            <SectionHeading primaryColor={college.primaryColor}>
-              The Sponsoring Society:
-            </SectionHeading>
-            <p className="font-hind font-normal text-[16px] leading-6 text-[#474747]">
-              {college.aboutSociety}
-            </p>
-          </section>
-
           {/* About GLEC */}
           <section>
             <SectionHeading primaryColor={college.primaryColor}>
@@ -238,29 +218,6 @@ export default function AboutPage() {
                   <h3 className="font-hind font-medium text-[20px] mb-3" style={{ color: college.primaryColor }}>Quality Policy</h3>
                   <div className="w-8 h-[3px] mb-4 rounded-full" style={{ backgroundColor: college.accentColor }} />
                   <p className="font-hind font-normal text-[14px] leading-[22px] text-[#474747]">{college.qualityPolicy}</p>
-                </div>
-
-                {/* Strategies */}
-                <div className="rounded-xl p-7 bg-white" style={{ border: '1.5px solid rgba(91,16,39,0.16)', boxShadow: '0 1px 3px rgba(91,16,39,0.05), 0 6px 20px -4px rgba(91,16,39,0.08)' }}>
-                  <span
-                    className="font-dm-sans font-semibold text-[11px] uppercase tracking-[2px] mb-2 block"
-                    style={{ color: college.accentColor }}
-                  >
-                    Our Approach
-                  </span>
-                  <h3 className="font-hind font-medium text-[20px] mb-3" style={{ color: college.primaryColor }}>Strategies</h3>
-                  <div className="w-8 h-[3px] mb-4 rounded-full" style={{ backgroundColor: college.accentColor }} />
-                  <ul className="space-y-2">
-                    {college.strategies.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span
-                          className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-[9px]"
-                          style={{ backgroundColor: college.accentColor }}
-                        />
-                        <span className="font-hind font-normal text-[14px] leading-[22px] text-[#474747]">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
 
               </div>

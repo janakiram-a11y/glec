@@ -154,49 +154,31 @@ function CollaborationsContent() {
   return (
     <>
       <SectionHeader label="Research Partnerships" title="Collaborations" />
-      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-10">
-        GLEC has established formal research and academic collaborations through Memoranda of Understanding
-        (MOUs) with leading industry organisations and academic institutions. These partnerships enhance
-        research exposure, internship opportunities, joint projects, and placement outcomes for students and faculty.
+      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-8">
+        {college.academicCollaborationsIntro}
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {collabs.map((c, i) => (
           <div
             key={i}
-            className="flex flex-col gap-4 p-6 rounded-2xl border bg-white hover:shadow-md transition-shadow"
+            className="flex items-center gap-3 p-5 rounded-xl border bg-white"
             style={{ borderColor: `${primary}18` }}
           >
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <h3 className="font-hind font-bold text-[18px]" style={{ color: primary }}>
-                  {c.name}
-                </h3>
-                <span
-                  className="inline-flex mt-1.5 px-3 py-1 rounded-full font-dm-sans font-semibold text-[11px] uppercase tracking-wide"
-                  style={{ backgroundColor: `${accent}20`, color: '#7a5a0a' }}
-                >
-                  {c.type}
-                </span>
-              </div>
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: `${primary}0F` }}
-              >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke={primary} strokeWidth="1.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                </svg>
-              </div>
+            <div
+              className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+              style={{ backgroundColor: `${primary}0F` }}
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke={primary} strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
             </div>
-            <p className="font-dm-sans text-[14px] leading-[24px] text-[#6B7280]">{c.desc}</p>
+            <h3 className="font-hind font-semibold text-[16px]" style={{ color: primary }}>
+              {c.name}
+            </h3>
           </div>
         ))}
       </div>
-
-      <InfoCallout>
-        GLEC actively pursues new industry and institutional collaborations to strengthen research ecosystems.
-        Faculty and students interested in collaborative research may contact the Research Cell through the Principal's office.
-      </InfoCallout>
     </>
   );
 }
@@ -207,11 +189,6 @@ function FacilitiesContent() {
   return (
     <>
       <SectionHeader label="Infrastructure" title="Research Facilities" />
-      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-8">
-        GLEC provides state-of-the-art research infrastructure to promote, nurture, and facilitate innovative
-        and collaborative research among students and faculty. The institution continuously invests in research
-        facilities to develop a centre of excellence.
-      </p>
 
       <div className="flex flex-col gap-8">
         {d.facilities.map((lab, i) => (
@@ -293,31 +270,6 @@ function AwardsContent() {
         {d.awards.desc}
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-        {d.awards.categories.map((cat, i) => (
-          <div
-            key={i}
-            className="rounded-2xl p-6 border"
-            style={{ borderColor: `${primary}14`, backgroundColor: i % 2 === 0 ? '#fff' : `${primary}04` }}
-          >
-            <div className="flex items-start gap-4 mb-3">
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: `${accent}18` }}
-              >
-                <svg className="w-5 h-5" style={{ color: accent }} fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              </div>
-              <h3 className="font-hind font-bold text-[16px]" style={{ color: primary }}>
-                {cat.title}
-              </h3>
-            </div>
-            <p className="font-dm-sans text-[14px] leading-[24px] text-[#6B7280]">{cat.desc}</p>
-          </div>
-        ))}
-      </div>
-
       {/* Photo gallery placeholders */}
       <SubHeading>Award Gallery</SubHeading>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -338,10 +290,6 @@ function AwardsContent() {
           </div>
         ))}
       </div>
-
-      <InfoCallout>
-        Research awards are presented annually at the GLEC Research Day event. Faculty are encouraged to publish in SCOPUS/WoS-indexed journals and present at reputed national and international conferences.
-      </InfoCallout>
     </>
   );
 }

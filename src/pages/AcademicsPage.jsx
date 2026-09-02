@@ -48,20 +48,6 @@ function BulletList({ items, small }) {
   );
 }
 
-function InfoCallout({ children }) {
-  return (
-    <div
-      className="rounded-xl p-5 flex items-start gap-3 mt-6"
-      style={{ backgroundColor: `${primary}08`, borderLeft: `4px solid ${accent}` }}
-    >
-      <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: accent }} fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-      </svg>
-      <p className="font-dm-sans text-[14px] leading-[24px] text-[#4B5563]">{children}</p>
-    </div>
-  );
-}
-
 function SubHeading({ children }) {
   return (
     <h3 className="font-hind font-semibold text-[17px] mb-5 mt-8 first:mt-0" style={{ color: primary }}>
@@ -106,6 +92,40 @@ function DataTable({ members, columns }) {
   );
 }
 
+// ── Section: Academics Overview ───────────────────────────────────────────────
+
+function OverviewContent() {
+  return (
+    <>
+      <SectionHeader label="Academics" title="Academics" />
+      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-6">
+        The departments of the GLEC are responsible for the academic activities which include Teaching,
+        Research and Industrial Consultancy. The courses of study are organized on semester basis. The
+        medium of instruction is English.
+      </p>
+      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-6">
+        Students are evaluated on a continuous basis each academic year, which consists of two semesters
+        with each semester providing a minimum of seventeen weeks of instructions. Evaluation comprises of
+        Continuous Internal Evaluation (CIE) and Semester End Examination (SEE). The rigours of academic
+        study at each level are balanced with a number of other related activities which include
+        co-curricular activities.
+      </p>
+      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-6">
+        Special lectures on varied topics of academic relevance are held under the Extra Mural Lecture
+        series. A number of conferences, symposia, and workshops are organized by the faculty, which
+        attract participation from scholars from all corners of India and abroad. Guest lectures and
+        industrial visits complement classroom interactions.
+      </p>
+      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747]">
+        The academic atmosphere at the Institute is a rare blend of modern-day technical skills and the
+        traditional emphasis on imparting knowledge. All the academic activities at the institute are
+        monitored by the Principal and HODs' Academic Affairs, and can be viewed through the academic
+        calendar, time tables of individual programmes, examination schedules, and yearly college diary.
+      </p>
+    </>
+  );
+}
+
 // ── Section: Academic Leadership ─────────────────────────────────────────────
 
 function LeadershipContent() {
@@ -142,50 +162,30 @@ function CollaborationsContent() {
   return (
     <>
       <SectionHeader label="Partnerships & MOUs" title="Academic Collaborations" />
-      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-10">
-        GLEC has forged strategic academic and industry collaborations through formal Memoranda of
-        Understanding (MOUs) to enhance student learning, placement outcomes, and research engagement.
-        These partnerships connect students with leading organisations across technology, education, and
-        the social sector.
+      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-8">
+        {college.academicCollaborationsIntro}
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {collabs.map((collab, i) => (
           <div
             key={i}
-            className="flex flex-col gap-4 p-6 rounded-2xl border bg-white hover:shadow-md transition-shadow"
+            className="flex items-center gap-3 p-5 rounded-xl border bg-white"
             style={{ borderColor: `${primary}18` }}
           >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h3 className="font-hind font-bold text-[18px] leading-snug" style={{ color: primary }}>
-                  {collab.name}
-                </h3>
-                <span
-                  className="inline-flex mt-1.5 px-3 py-1 rounded-full font-dm-sans font-semibold text-[11px] uppercase tracking-wide"
-                  style={{ backgroundColor: `${accent}20`, color: '#7a5a0a' }}
-                >
-                  {collab.type}
-                </span>
-              </div>
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: `${primary}0F` }}
-              >
-                <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5" stroke={primary} strokeWidth="1.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                </svg>
-              </div>
+            <div
+              className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+              style={{ backgroundColor: `${primary}0F` }}
+            >
+              <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5" stroke={primary} strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
             </div>
-            <p className="font-dm-sans text-[14px] leading-[24px] text-[#6B7280]">{collab.desc}</p>
+            <h3 className="font-hind font-semibold text-[16px]" style={{ color: primary }}>
+              {collab.name}
+            </h3>
           </div>
         ))}
       </div>
-
-      <InfoCallout>
-        A Memorandum of Understanding (MOU) is a formal agreement between two or more parties signalling
-        willingness to move forward with a collaborative arrangement. GLEC actively pursues MOUs that
-        benefit students through internships, skill development, and placement opportunities.
-      </InfoCallout>
     </>
   );
 }
@@ -211,11 +211,12 @@ function IqacContent() {
         ]}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
         {[
           { title: 'Primary Aims',    items: iqac.aims },
           { title: 'Key Functions',   items: iqac.functions },
           { title: 'Strategic Focus', items: iqac.strategicFocus },
+          { title: 'Benefits',        items: iqac.benefits },
         ].map(({ title, items }) => (
           <div key={title}>
             <p className="font-hind font-semibold text-[14px] mb-4" style={{ color: primary }}>
@@ -236,12 +237,16 @@ function LibraryContent() {
   return (
     <>
       <SectionHeader label="Knowledge Resources" title="Central Library" />
-      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-8">
+      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-4">
         {lib.description}
+      </p>
+      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-8">
+        {lib.description2}
       </p>
 
       {/* Stats row */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
+      <SubHeading>Availability of Particulars</SubHeading>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-4">
         {lib.stats.map((s) => (
           <div
             key={s.label}
@@ -256,53 +261,6 @@ function LibraryContent() {
           </div>
         ))}
       </div>
-
-      {/* Facilities cards */}
-      <SubHeading>Facilities & Resources</SubHeading>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
-        {lib.facilities.map((f, i) => (
-          <div
-            key={i}
-            className="flex gap-4 p-5 rounded-xl border"
-            style={{ borderColor: `${primary}14` }}
-          >
-            <div
-              className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 font-hind font-bold text-[12px]"
-              style={{ backgroundColor: `${primary}12`, color: primary }}
-            >
-              {String(i + 1).padStart(2, '0')}
-            </div>
-            <div>
-              <p className="font-hind font-semibold text-[14px] mb-1" style={{ color: primary }}>
-                {f.title}
-              </p>
-              <p className="font-dm-sans text-[13px] leading-[22px] text-[#6B7280]">{f.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Hours + Contact */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-        <div className="rounded-xl p-5" style={{ backgroundColor: `${primary}08`, border: `1px solid ${primary}14` }}>
-          <p className="font-dm-sans font-semibold text-[11px] uppercase tracking-widest mb-1" style={{ color: `${primary}70` }}>
-            Working Hours
-          </p>
-          <p className="font-hind font-semibold text-[15px]" style={{ color: primary }}>{lib.hours}</p>
-        </div>
-        <div className="rounded-xl p-5" style={{ backgroundColor: `${primary}08`, border: `1px solid ${primary}14` }}>
-          <p className="font-dm-sans font-semibold text-[11px] uppercase tracking-widest mb-1" style={{ color: `${primary}70` }}>
-            Library Contact
-          </p>
-          <a href={`mailto:${lib.contact}`} className="font-hind font-semibold text-[15px] hover:underline" style={{ color: primary }}>
-            {lib.contact}
-          </a>
-        </div>
-      </div>
-
-      {/* Library Rules */}
-      <SubHeading>Library Rules</SubHeading>
-      <BulletList items={lib.rules} />
     </>
   );
 }
@@ -310,48 +268,14 @@ function LibraryContent() {
 // ── Section: Rules & Regulations ─────────────────────────────────────────────
 
 function RulesContent() {
-  const rules = [
-    { title: 'Attendance Policy', desc: 'Students must maintain a minimum of 75% attendance in each subject. Those with less than 75% are not eligible to appear in end-semester examinations without prior condonation approval.' },
-    { title: 'Dress Code', desc: 'Students must wear the prescribed college uniform on all working days and during examinations. ID cards must be worn visibly within the campus at all times.' },
-    { title: 'Academic Conduct', desc: 'Malpractice during sessional or end-semester examinations is treated as a serious offence, resulting in disciplinary action as per Osmania University and AICTE guidelines.' },
-    { title: 'Campus Behaviour', desc: 'Students must maintain decorum within the campus premises. Ragging, harassment, or any form of anti-social behaviour will attract strict disciplinary action including expulsion.' },
-    { title: 'Mobile Phones', desc: 'Use of mobile phones is strictly prohibited in classrooms, laboratories, and examination halls during academic hours. Violations may lead to confiscation and fine.' },
-    { title: 'Library Usage', desc: 'Library books must be returned within 14 days. Late returns attract a fine of ₹2 per day per book. Reference books, journals, and periodicals must not be taken out of the library.' },
-    { title: 'Laboratory Conduct', desc: 'Students must wear lab coats in chemistry and other applicable laboratories. Equipment must be handled with care and any damage reported immediately to the lab instructor.' },
-    { title: 'Fee Payment', desc: 'Tuition and special fees must be paid by the due dates notified each semester. Late payment attracts a penalty as per institutional rules.' },
-  ];
-
   return (
     <>
       <SectionHeader label="Academic Policy" title="Rules & Regulations" />
       <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-8">
-        As per Osmania University guidelines, the following rules and regulations are prescribed for all
-        students of Gokaraju Lailavathi Engineering College. These norms govern academic conduct,
-        discipline, and campus behaviour across all B.E. programmes.
+        As per Osmania University guidelines, the following are the Rules and Regulations prescribed for
+        the Gokaraju Lailavathi Engineering College. In this regard, Osmania University is the competent
+        authority to amend the rules from time to time.
       </p>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
-        {rules.map((rule, i) => (
-          <div
-            key={i}
-            className="flex gap-4 p-5 rounded-xl border"
-            style={{ borderColor: `${primary}18` }}
-          >
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 font-hind font-bold text-[13px] text-white"
-              style={{ backgroundColor: primary }}
-            >
-              {i + 1}
-            </div>
-            <div>
-              <p className="font-hind font-semibold text-[14px] mb-1" style={{ color: primary }}>
-                {rule.title}
-              </p>
-              <p className="font-dm-sans text-[13px] leading-[22px] text-[#6B7280]">{rule.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
 
       {/* Download PDF */}
       <div
@@ -386,25 +310,9 @@ function RulesContent() {
 // ── Section: Academic Calendar ────────────────────────────────────────────────
 
 function CalendarContent() {
-  const keyDates = [
-    { event: 'Commencement of Classes — B.E. I Year 2025–26', date: '28 Aug 2025' },
-    { event: 'I Sessional Examinations',                       date: 'Sep – Oct 2025' },
-    { event: 'II Sessional Examinations',                      date: 'Nov 2025' },
-    { event: 'End Semester Examinations',                      date: 'Dec 2025 – Jan 2026' },
-    { event: 'Winter Vacation',                                date: 'Dec 2025' },
-    { event: 'Commencement of II Semester',                    date: 'Jan 2026' },
-    { event: 'III Sessional Examinations',                     date: 'Feb – Mar 2026' },
-    { event: 'II End Semester Examinations',                   date: 'Apr – May 2026' },
-  ];
-
   return (
     <>
       <SectionHeader label="Academic Schedule" title="Academic Calendar" />
-      <p className="font-dm-sans text-[15px] leading-[27px] text-[#474747] mb-8">
-        The Academic Calendar for GLEC is prepared in alignment with the Osmania University almanac and
-        AICTE norms. It outlines semester schedules, examination dates, holidays, and key academic events
-        for the academic year.
-      </p>
 
       {/* Download card */}
       <div
@@ -435,33 +343,6 @@ function CalendarContent() {
           Download PDF
         </a>
       </div>
-
-      {/* Key dates */}
-      <SubHeading>Key Academic Dates 2025–26</SubHeading>
-      <div className="flex flex-col gap-0 rounded-xl overflow-hidden border border-[#E5E7EB]">
-        {keyDates.map((item, i) => (
-          <div
-            key={i}
-            className="flex items-center justify-between gap-4 px-5 py-4 border-b last:border-0"
-            style={{
-              backgroundColor: i % 2 === 0 ? '#fff' : '#FAFAFA',
-              borderColor: '#F3F4F6',
-            }}
-          >
-            <span className="font-dm-sans font-normal text-[14px] text-[#374151]">{item.event}</span>
-            <span
-              className="font-dm-sans font-semibold text-[12px] flex-shrink-0 px-3 py-1 rounded-full"
-              style={{ backgroundColor: `${accent}18`, color: '#7a5a0a' }}
-            >
-              {item.date}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      <InfoCallout>
-        Academic calendar dates are subject to revision as per Osmania University notifications or government orders. Students are advised to check the official college notice board and website for updates.
-      </InfoCallout>
     </>
   );
 }
@@ -469,6 +350,7 @@ function CalendarContent() {
 // ── Section registry ──────────────────────────────────────────────────────────
 
 const SECTIONS = [
+  { id: 'overview',         path: '/academics/overview',         label: 'Academics',              content: <OverviewContent /> },
   { id: 'leadership',       path: '/academics/leadership',       label: 'Academic Leadership',    content: <LeadershipContent /> },
   { id: 'collaborations',   path: '/academics/collaborations',   label: 'Academic Collaborations', content: <CollaborationsContent /> },
   { id: 'iqac',             path: '/academics/iqac',             label: 'IQAC',                   content: <IqacContent /> },
@@ -481,11 +363,11 @@ const SECTIONS = [
 
 export default function AcademicsPage() {
   const { section } = useParams();
-  const activeId = section || 'leadership';
+  const activeId = section || 'overview';
   const currentSection = SECTIONS.find((s) => s.id === activeId);
 
   if (!currentSection) {
-    return <Navigate to="/academics/leadership" replace />;
+    return <Navigate to="/academics/overview" replace />;
   }
 
   return (

@@ -213,7 +213,7 @@ function InfoCards() {
 /* ─── Enquiry form ────────────────────────────────────────────────────────── */
 
 function EnquiryForm() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', phone: '', location: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading]     = useState(false);
 
@@ -224,7 +224,19 @@ function EnquiryForm() {
   function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => { setLoading(false); setSubmitted(true); }, 900);
+
+    const subject = encodeURIComponent(`Website Enquiry${form.subject ? `: ${form.subject}` : ''} — ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\n` +
+      `Email: ${form.email}\n` +
+      (form.phone ? `Phone: ${form.phone}\n` : '') +
+      (form.location ? `Location: ${form.location}\n` : '') +
+      (form.subject ? `Subject: ${form.subject}\n` : '') +
+      `\nMessage:\n${form.message}`
+    );
+    window.location.href = `mailto:${college.email}?subject=${subject}&body=${body}`;
+
+    setTimeout(() => { setLoading(false); setSubmitted(true); }, 500);
   }
 
   const fieldWrap = 'flex flex-col gap-1.5';
@@ -257,13 +269,13 @@ function EnquiryForm() {
           <div className="w-9 h-9" style={{ color: accent }}>{Ico.check}</div>
         </div>
         <div>
-          <p className="font-hind font-bold text-[22px] mb-2" style={{ color: primary }}>Message Sent!</p>
-          <p className="font-dm-sans text-[14px] leading-relaxed text-[#6B7280] max-w-[300px]">
-            Thank you for reaching out. We'll get back to you within 24–48 working hours.
+          <p className="font-hind font-bold text-[22px] mb-2" style={{ color: primary }}>Email App Opened</p>
+          <p className="font-dm-sans text-[14px] leading-relaxed text-[#6B7280] max-w-[320px]">
+            We've opened your email app with your message pre-filled and addressed to {college.email}. Please hit send there to complete your enquiry.
           </p>
         </div>
         <button
-          onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', subject: '', message: '' }); }}
+          onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', location: '', subject: '', message: '' }); }}
           className="font-dm-sans font-semibold text-[13px] px-6 py-2.5 rounded-xl border-2 transition-all hover:bg-opacity-10"
           style={{ color: primary, borderColor: `${primary}30` }}
           onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = `${primary}0A`; }}
@@ -293,33 +305,39 @@ function EnquiryForm() {
         </div>
       </div>
 
-      {/* Phone + Subject */}
+      {/* Phone + Location */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className={fieldWrap}>
           <label className={labelCls} style={{ color: `${primary}80` }}>Phone Number</label>
           <input {...inputProps('phone', 'tel', false, '+91 XXXXX XXXXX')} />
         </div>
         <div className={fieldWrap}>
-          <label className={labelCls} style={{ color: `${primary}80` }}>
-            Subject <span style={{ color: accent }}>*</span>
-          </label>
-          <select
-            name="subject" required value={form.subject} onChange={handleChange}
-            className={baseCls}
-            style={{ borderColor: `${primary}1A`, color: form.subject ? '#1F2937' : '#9CA3AF' }}
-            onFocus={(e) => { e.target.style.borderColor = accent; e.target.style.backgroundColor = '#fff'; }}
-            onBlur={(e)  => { e.target.style.borderColor = `${primary}1A`; e.target.style.backgroundColor = '#FAFAFA'; }}
-          >
-            <option value="" disabled>Select a subject</option>
-            <option value="Admissions Enquiry">Admissions Enquiry</option>
-            <option value="Academic Query">Academic Query</option>
-            <option value="Examination">Examination</option>
-            <option value="Placements">Placements</option>
-            <option value="Hostel &amp; Transport">Hostel &amp; Transport</option>
-            <option value="Research Collaboration">Research Collaboration</option>
-            <option value="General Enquiry">General Enquiry</option>
-          </select>
+          <label className={labelCls} style={{ color: `${primary}80` }}>Location</label>
+          <input {...inputProps('location', 'text', false, 'Your city / town')} />
         </div>
+      </div>
+
+      {/* Subject */}
+      <div className={fieldWrap}>
+        <label className={labelCls} style={{ color: `${primary}80` }}>
+          Subject <span style={{ color: accent }}>*</span>
+        </label>
+        <select
+          name="subject" required value={form.subject} onChange={handleChange}
+          className={baseCls}
+          style={{ borderColor: `${primary}1A`, color: form.subject ? '#1F2937' : '#9CA3AF' }}
+          onFocus={(e) => { e.target.style.borderColor = accent; e.target.style.backgroundColor = '#fff'; }}
+          onBlur={(e)  => { e.target.style.borderColor = `${primary}1A`; e.target.style.backgroundColor = '#FAFAFA'; }}
+        >
+          <option value="" disabled>Select a subject</option>
+          <option value="Admissions Enquiry">Admissions Enquiry</option>
+          <option value="Academic Query">Academic Query</option>
+          <option value="Examination">Examination</option>
+          <option value="Placements">Placements</option>
+          <option value="Hostel &amp; Transport">Hostel &amp; Transport</option>
+          <option value="Research Collaboration">Research Collaboration</option>
+          <option value="General Enquiry">General Enquiry</option>
+        </select>
       </div>
 
       {/* Message */}

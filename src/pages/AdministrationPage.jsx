@@ -124,11 +124,6 @@ function ManagementContent() {
   return (
     <>
       <SectionHeader label="Leadership" title="Management" />
-      <p className="font-dm-sans font-normal text-[15px] leading-[27px] text-[#474747] mb-10">
-        GLEC is led by a distinguished management team under the Gokaraju Rangaraju Educational Society,
-        comprising visionary industrialists, academic leaders, and experienced administrators committed to
-        delivering world-class engineering education.
-      </p>
       <div className="flex flex-col gap-6">
         {college.leadership.map((person) => (
           <div
@@ -240,6 +235,7 @@ function GoverningBodyContent() {
           { key: 'no', label: 'S.No.' },
           { key: 'image', label: 'Photo', avatar: true },
           { key: 'name', label: 'Name', accent: true },
+          { key: 'affiliation', label: 'Affiliation' },
           { key: 'role', label: 'Role' },
           { key: 'category', label: 'Category' },
           { key: 'email', label: 'Email' },
@@ -519,6 +515,12 @@ function GrievanceContent() {
     <>
       <SectionHeader label="Student Support" title="Grievance Redressal Policy" />
       <SectionDesc text={g.description} />
+      <div className="mb-10">
+        <p className="font-hind font-semibold text-[15px] mb-4" style={{ color: college.primaryColor }}>
+          Objectives
+        </p>
+        <ObjectivesList items={g.objectives} />
+      </div>
       <CommitteeTable
         members={g.members}
         columns={[
@@ -527,6 +529,9 @@ function GrievanceContent() {
           { key: 'role', label: 'Role' },
         ]}
       />
+      <p className="font-dm-sans font-normal text-[14px] leading-[24px] text-[#6B7280] mt-6">
+        {g.establishmentNote}
+      </p>
       <div className="mt-10">
         <p className="font-hind font-semibold text-[15px] mb-6" style={{ color: college.primaryColor }}>
           How to Submit a Grievance
